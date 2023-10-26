@@ -15,8 +15,8 @@ const GameCard: React.FC<{game:IGame}> = ({ game }) => {
     <div className="game-card">
       <div className="game-image" style={{ backgroundImage: `url(${game.characterImage})` }}></div>
       <h3>{game.characterName}</h3>
-      <p>"{game.characterState}"</p>
-      <p>"{game.characterEnding}"</p>
+      <p>{game.characterState}</p>
+      <p>{game.characterEnding}</p>
     </div>
   );
 };
