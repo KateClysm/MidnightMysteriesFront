@@ -1,5 +1,5 @@
 import React from "react";
-import GameCard from "../../components/game-card/GameCard";
+// import GameCard from "../../components/game-card/GameCard";
 
 const Perfil: React.FC = () => {
 
@@ -10,7 +10,7 @@ const Perfil: React.FC = () => {
 
       {/* if user has more than 0 games, show the cards of those games: */}
 
-      <GameCard/>
+      {/* <GameCard/> */}
 
       {/* Tener en cuenta: el componente GameCard marca error porque es preciso pasarle los objetos con una iteración, luego de realizar la petición de los mismos a la base de datos. */}
       

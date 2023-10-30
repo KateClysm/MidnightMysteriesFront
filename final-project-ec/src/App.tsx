@@ -1,22 +1,23 @@
 import React from 'react';
 import './App.css';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Homepage from './pages/homepage/Homepage';
 import Perfil from './pages/perfil/Perfil';
 import NotFound from './pages/not-found/NotFound';
+import PrincipalPage from './pages/principal-page/PrincipalPage';
+import Nav from './components/nav/Nav';
+import Footer from './components/footer/Footer';
 
 
 const App: React.FC = () => {
 
-  const Layout = () => {
+  const LayoutLoggedIn = () => {
     return (
       <div className="container-app">
-        <h1 className="title">FINAL PROJECT</h1>
-
+        <Nav />
         <div className="window">
           <Outlet />
         </div>
-
+        <Footer />
       </div>
     );
   };
@@ -24,13 +25,13 @@ const App: React.FC = () => {
   const router = createBrowserRouter([
     {
       path: '/', 
-      element: <Layout />,
+      element: <LayoutLoggedIn />,
       children: [
         {
           path: '/',
           element: 
             <>
-             <Homepage/>
+             <PrincipalPage/>
             </>
         },
         {
