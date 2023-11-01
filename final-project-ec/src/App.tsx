@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Homepage from './pages/homepage/Homepage';
 import Perfil from './pages/perfil/Perfil';

@@ -1,0 +1,29 @@
+[33mcommit 4521fffd9e83c8b02d33ed163378e57f399d54c4[m[33m ([m[1;36mHEAD -> [m[1;32mPrincipal-Page[m[33m)[m
+Author: Maria Monchot <kateclysm@gmail.com>
+Date:   Wed Nov 1 13:57:22 2023 -0300
+
+    Small Change. -Maria Monchot
+
+[33mcommit 428cd88ba7275403e5f33c4061c68542a14858b2[m[33m ([m[1;31morigin/Principal-Page[m[33m)[m
+Author: Maria Monchot <kateclysm@gmail.com>
+Date:   Mon Oct 30 17:57:44 2023 -0300
+
+    Principal Page Base, Nav & Footer. -Maria Monchot
+
+[33mcommit e50cab696e809d2165d5604cb63a5a1c8982c004[m[33m ([m[1;31morigin/Help-page[m[33m, [m[1;32mmain[m[33m)[m
+Author: Maria Monchot <kateclysm@gmail.com>
+Date:   Thu Oct 26 15:36:31 2023 -0300
+
+    small edit. -Maria Monchot
+
+[33mcommit 04662b1808d220fb5404271402c419904de39b45[m
+Author: Maria Monchot <kateclysm@gmail.com>
+Date:   Thu Oct 26 15:22:39 2023 -0300
+
+    Base of the project and simple examples of pages, components, interfaces and implementation use. -Maria Monchot
+
+[33mcommit 132c0196dd62a221de7c0984f460ebe640df9fc9[m
+Author: Maria Monchot <kateclysm@gmail.com>
+Date:   Wed Oct 18 10:57:26 2023 -0300
+
+    first commit
