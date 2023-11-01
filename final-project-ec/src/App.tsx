@@ -1,11 +1,12 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Perfil from './pages/perfil/Perfil';
 import NotFound from './pages/not-found/NotFound';
 import PrincipalPage from './pages/principal-page/PrincipalPage';
 import Nav from './components/nav/Nav';
 import Footer from './components/footer/Footer';
+import Register from './pages/register/Register';
 
 
 const App: React.FC = () => {
@@ -39,6 +40,10 @@ const App: React.FC = () => {
           element: <Perfil/>
         },
       ]
+    },
+    {
+      path: '/register',
+      element: <Register />
     },
     {
       path: '/*',
