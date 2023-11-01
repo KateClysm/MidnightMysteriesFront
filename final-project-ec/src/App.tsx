@@ -4,6 +4,7 @@ import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Homepage from './pages/homepage/Homepage';
 import Perfil from './pages/perfil/Perfil';
 import NotFound from './pages/not-found/NotFound';
+import Register from './pages/register/Register';
 
 
 const App: React.FC = () => {
@@ -38,6 +39,10 @@ const App: React.FC = () => {
           element: <Perfil/>
         },
       ]
+    },
+    {
+      path: '/register',
+      element: <Register />
     },
     {
       path: '/*',
