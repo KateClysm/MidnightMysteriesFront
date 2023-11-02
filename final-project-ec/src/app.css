@@ -1,0 +1,75 @@
+:root {
+    --night-color: #0f0f0f;
+    /* --night-color: #03242F; */
+    --night-light-color: #02a0d4;
+    /* --maroon-color: #491111; */
+    --maroon-color: #363636;
+    --blood-color: #c50303;
+    --white-color: #F0F0F0;
+    --black-color: #131313;
+    --transparent-black-color: #0505056b;
+  
+    --font-size-small-mobile: 9px;
+    --font-size-mobile: 10px;
+    --font-size-tablet: 12px;
+    --font-size-laptop: 14px;
+    --font-size-desktop: 16px;
+    --font-size-large-desktop: 18px;
+    --font-size-huge-desktop: 20px;
+}
+  
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Amatic SC', sans-serif;
+    
+}
+  
+  body{
+    background-image: linear-gradient(180deg, var(--maroon-color) 0%, var(--black-color) 80% );
+    background-attachment: fixed;
+}
+  
+html, body {
+    height: 100%;
+    width: 100%;
+}
+  
+a { text-decoration: none; }
+  
+
+p { font-size: 2.2rem; }
+h1 { 
+    font-size: 7rem; 
+    font-family: 'Bigelow Rules', serif;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+}
+h2 { font-size: 6rem; }
+h3 { font-size: 5rem; }
+h4 { font-size: 2.5rem; }
+button, a { 
+    font-size: 2rem; 
+    cursor: pointer;
+    color: var(--white-color);
+
+    &:hover{
+        color: var(--blood-color);
+        transition: 0.3s;
+    }
+}
+button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+  html {font-size: var(--font-size-small-mobile);}
+  @media (min-width: 425px) { html {font-size: var(--font-size-mobile);} }
+  @media (min-width: 600px) { html {font-size: var(--font-size-tablet);} }
+  @media (min-width: 1240px) { html {font-size: var(--font-size-laptop);} }
+  @media (min-width: 1400px) { html {font-size: var(--font-size-desktop);} }
+  @media (min-width: 1900px) { html {font-size: var(--font-size-large-desktop);} }
+  @media (min-width: 2500px) { html {font-size: var(--font-size-huge-desktop);} }

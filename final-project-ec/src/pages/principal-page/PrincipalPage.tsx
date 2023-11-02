@@ -1,5 +1,5 @@
 import React from "react";
-import './principalpage.css';
+import './principalpage.scss';
 
 const PrincipalPage: React.FC = () => {
 
@@ -13,7 +13,7 @@ const PrincipalPage: React.FC = () => {
         <div className="provitional-ilustration"></div>
       </div>
 
-      <p className="resume-game">RESUME GAME</p>
+      <button className="resume-game">RESUME GAME</button>
     </div>
   );
 };

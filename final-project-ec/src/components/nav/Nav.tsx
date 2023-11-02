@@ -1,5 +1,5 @@
 import React from "react";
-import './nav.css';
+import './nav.scss';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
@@ -21,8 +21,8 @@ const Nav: React.FC = () => {
     <div className="container-nav">
         <div className="container-left">
             <NavLink to="/PrincipalPage" className="nav-item">HOME</NavLink>
-            <NavLink to="/Help" className="nav-item">HELP</NavLink>
-            {hasGameInProgress ? null : <NavLink to="/NewGame">NEW GAME</NavLink>}
+            {hasGameInProgress ? null : <NavLink to="/PlayGame">PLAY</NavLink>}
+            {hasGameInProgress ? <NavLink to="/NewGame">NEW GAME</NavLink> : null}
             <button onClick={() => handleSave()} className="nav-item">SAVE GAME</button>
         </div>
 

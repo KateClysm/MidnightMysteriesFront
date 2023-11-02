@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.scss';
+import './App.css';
+
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Perfil from './pages/perfil/Perfil';
 import NotFound from './pages/not-found/NotFound';
