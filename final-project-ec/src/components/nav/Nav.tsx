@@ -28,7 +28,7 @@ const Nav: React.FC = () => {
 
         <div className="container-right">
             <button onClick={() => handleLogOut()} className="nav-item">LOGOUT</button>
-            <NavLink to="/PlayerProfile" className="user-icon-container">
+            <NavLink to="/perfil" className="user-icon-container">
                 <FontAwesomeIcon icon={faCircleUser} />
             </NavLink>
         </div>
