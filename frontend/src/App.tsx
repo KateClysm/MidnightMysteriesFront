@@ -2,12 +2,9 @@ import React from 'react';
 import './App.css';
 
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
-<<<<<<< HEAD:final-project-ec/src/App.tsx
-import Homepage from './pages/homepage/Homepage';
+// import Homepage from './pages/homepage/Homepage';
 import Profile from './pages/profile/profile';
-=======
-import Perfil from './pages/perfil/Perfil';
->>>>>>> b8d86e0367be11ac89564fa5643e80fe4acd01e3:frontend/src/App.tsx
+// import Perfil from './pages/perfil/Perfil';
 import NotFound from './pages/not-found/NotFound';
 import PrincipalPage from './pages/principal-page/PrincipalPage';
 import Nav from './components/nav/Nav';
@@ -38,7 +35,7 @@ const App: React.FC = () => {
           path: '/',
           element: 
             <>
-             <PrincipalPage/>
+              <PrincipalPage/>
             </>
         },
         {

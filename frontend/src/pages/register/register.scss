@@ -1,0 +1,111 @@
+.container-register{
+    padding: 5% 5%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--white-color);
+        text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 65%;
+    border: 1px solid var(--white-color);
+    background-image: url('../../assets/principal-character.png'),
+                        url('../../assets/principal-fem-character.png');
+    background-position: top right,
+                        left center;
+    background-size: 25vw;
+    background-repeat: no-repeat;
+    header{
+        h2{
+            font-family: 'Bigelow Rules', serif;
+            font-weight: lighter;
+        }
+    }
+    label{
+        display: none;
+    }
+    input{
+        padding: .5rem;
+        width: 10rem;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid var(--white-color);
+        outline: none;
+        &::placeholder{
+            color: var(--white-color);
+        }
+    }
+    .btn{
+        padding: .5rem;
+    }
+    .button {
+        width: 4rem;
+        height: 2rem;
+        display: inline-block;
+        border: 1px solid var(--white-color);
+        border-radius: 4px;
+        transition: all 0.2s ease-in;
+        position: relative;
+        overflow: hidden;
+        font-size: 1rem;
+        color: var(--white-color);
+        z-index: 1;
+       }
+       
+       .button:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) scaleY(1) scaleX(1.25);
+        top: 100%;
+        width: 140%;
+        height: 180%;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 50%;
+        display: block;
+        transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+        z-index: -1;
+       }
+       
+       .button:after {
+        content: "";
+        position: absolute;
+        left: 55%;
+        transform: translateX(-50%) scaleY(1) scaleX(1.45);
+        top: 180%;
+        width: 160%;
+        height: 190%;
+        background-color: var(--white-color);
+        border-radius: 50%;
+        display: block;
+        transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+        z-index: -1;
+
+       }
+       
+       .button:hover {
+        font-weight: bold;
+        color: #000000;
+        border: 1px solid var(--white-color);
+       }
+       
+       .button:hover:before {
+        top: -35%;
+        background-color: var(--white-color);
+        transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+       }
+       
+       .button:hover:after {
+        top: -45%;
+        background-color: var(--white-color);
+        transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+       }
+}
