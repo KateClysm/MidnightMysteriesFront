@@ -1,0 +1,17 @@
+.container-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    
+    .container-left, .container-right{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        
+    }
+
+    .user-icon-container{
+        font-size: 1.9rem;
+    }
+}
