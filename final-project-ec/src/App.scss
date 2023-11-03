@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,700&display=swap');
+
+
 $night-color: #03242F;
 $night-light-color: #02a0d4;
 $maroon-color: #491111;
@@ -23,6 +27,7 @@ $font-size-huge-desktop: 20px;
 html, body {
   height: 100%;
   width: 100%;
+  background: linear-gradient(0deg, #343434 0%, #000000 100%);
 }
 
 a{text-decoration: none;}

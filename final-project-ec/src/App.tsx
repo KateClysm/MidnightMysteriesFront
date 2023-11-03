@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Homepage from './pages/homepage/Homepage';
-import Perfil from './pages/perfil/Perfil';
+import Profile from './pages/profile/profile';
 import NotFound from './pages/not-found/NotFound';
 import Register from './pages/register/Register';
 
@@ -35,8 +35,8 @@ const App: React.FC = () => {
             </>
         },
         {
-          path: '/perfil',
-          element: <Perfil/>
+          path: '/profile',
+          element: <Profile/>
         },
       ]
     },
