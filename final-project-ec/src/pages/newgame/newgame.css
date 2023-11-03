@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Good Vibration Regular';
+    src: url('../trial-fonts/VTKS\ Good\ Vibrations.ttf') format('ttf'),
+         url('../trial-fonts/vtks_good_vibrations-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    margin: 0;
+    background-image: linear-gradient(#4A1111, #03242F);
+    height: 100vh;
+}
+
+h2 {
+    color: whitesmoke;
+    text-align: center;
+    font-family: 'Good Vibration Regular', sans-serif;
+    font-weight: 300;
+    font-size: 2em;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+h2:hover {
+    color: black;
+}

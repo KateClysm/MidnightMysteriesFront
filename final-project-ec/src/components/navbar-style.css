@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Good Vibration Regular';
+    src: url('../trial-fonts/VTKS\ Good\ Vibrations.ttf') format('ttf'),
+         url('../trial-fonts/vtks_good_vibrations-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'cheveuxdangemedium';
+    src: url('../trial-fonts/cheveuxdange-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: transparent;
+    justify-content: space-between;
+    margin: 0;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: 'Good Vibration Regular', sans-serif;
+    border-bottom: 1px solid #F9EEEE;
+    box-shadow: 0 4px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+.navbar button {
+    background-color: black;
+    border: none;
+    padding: 5px;
+    border-radius: 10%;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.navbar button:hover {
+    background-color: darkred;
+}
+
+.navbar button:active {
+    -webkit-box-shadow: inset 1px 1px 10px #333;
+    -moz-box-shadow:    inset 1px 1px 10px #333;
+    box-shadow:         inset 1px 1px 10px #333;
+}
+
+.navbar button:hover > a {
+    color: #F5E0E0;
+}
+
+.navbar button a {
+    text-decoration: none;
+    font-family: 'cheveuxdangemedium';
+    color: white;
+    padding: 4px;
+}
+
+
+.navbar .dropdown-btn {
+    background-color: transparent;
+    color: whitesmoke;
+    padding: 0;
+}
+
+.dropdown-btn:hover {
+    background-color: transparent !important;
+    color: darkred;
+}
+
+.user-icon {
+    font-size: 1.5em;
+    padding-left: 5px;
+    align-self: center;
+
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    z-index: 1;
+    right: 0;
+    margin: 0;
+    margin-top: 10px;
+    border-bottom: 1px solid whitesmoke;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+}
+
+.dropdown-menu.active {
+    display: block;
+    list-style: none;
+    top: 3;
+    font-family: 'cheveuxdangemedium';
+    color: whitesmoke;
+}
+
+.dropdown-menu li{
+    padding: 5px;
+}
+
+.dropdown-menu li:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5%
+}
+
+.align {
+    align-items: center;
+}
