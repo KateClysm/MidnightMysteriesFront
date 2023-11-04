@@ -1,12 +1,8 @@
 :root {
-    --night-color: #0f0f0f;
-    /* --night-color: #03242F; */
-    --night-light-color: #02a0d4;
-    /* --maroon-color: #491111; */
-    --maroon-color: #363636;
+    --black-color: #070707;
+    --grey-color: #363636;
     --blood-color: #c50303;
     --white-color: #F0F0F0;
-    --black-color: #131313;
     --transparent-black-color: #0505056b;
   
     --font-size-small-mobile: 9px;
@@ -28,7 +24,7 @@
 }
   
   body{
-    background-image: linear-gradient(180deg, var(--maroon-color) 0%, var(--black-color) 80% );
+    background-image: linear-gradient(180deg, var(--grey-color) 0%, var(--black-color) 80% );
     background-attachment: fixed;
 }
   
@@ -39,8 +35,8 @@ html, body {
   
 a { text-decoration: none; }
   
-
-p { font-size: 2.2rem; }
+.footer-icon { font-size: 1.6rem; }
+p{ font-size: 2rem; }
 h1 { 
     font-size: 7rem; 
     font-family: 'Bigelow Rules', serif;
@@ -49,12 +45,12 @@ h1 {
 }
 h2 { font-size: 4rem; }
 h3 { font-size: 3rem; }
-h4 { font-size: 2.5rem; }
-button, a { 
-    font-size: 2rem; 
+h4 { font-size: 2.1rem; }
+button, a { font-size: 2rem; }
+
+button, a, .footer-icon{
     cursor: pointer;
     color: var(--white-color);
-
     &:hover{
         color: var(--blood-color);
         transition: 0.3s;
