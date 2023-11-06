@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Good Vibration Regular';
+    src: url('../../assets/trial-fonts/vtks_good_vibrations-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.container-main {
+    margin: 0;
+    width: 100vw;
+    height: fit-content;
+    background-image: transparent;
+    background-attachment: fixed;
+    overflow: hidden;
+    padding-bottom: 3em;
+
+    @media screen and (max-width: 800px) {
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    h1 {
+        font-size: 4em;
+        text-align: center;
+        font-weight: 300;
+        color: var(--white-color);
+        font-family: 'Good Vibration Regular';
+        letter-spacing: normal;
+    }
+
+    .art {
+        background-image: url(../../assets/provitional-ilustration.png); 
+        height: 60vh; 
+        width: 60vw; 
+        background-size: cover;  
+        background-repeat: no-repeat;  
+        background-position: top;
+        margin: 0 auto;
+        border: 1px solid var(--white-color);
+        @media screen and (max-width: 800px){
+            height: 40%;
+            width: 90%;
+        }
+    }
+
+    .newgame-button {
+        font-size: 3em;
+        font-family: 'Good Vibration Regular';
+        font-weight: 300;
+        display: block;
+        margin: 0 auto;
+        padding-top: 1em;
+        @media screen and (max-width: 800px) {
+            margin-top: 2em;
+        }
+    }
+}
