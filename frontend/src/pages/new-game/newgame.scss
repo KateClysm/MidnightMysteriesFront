@@ -7,31 +7,21 @@
 }
 
 .container-main {
-    margin: 0;
     width: 100vw;
-    height: fit-content;
+    height: 90vh;
     background-image: transparent;
     background-attachment: fixed;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-bottom: 3em;
 
     @media screen and (max-width: 800px) {
         height: 85vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         padding: 0;
     }
     
-    h1 {
-        font-size: 4em;
-        text-align: center;
-        font-weight: 300;
-        color: var(--white-color);
-        font-family: 'Good Vibration Regular';
-        letter-spacing: normal;
-    }
-
     .art {
         background-image: url(../../assets/provitional-ilustration.png); 
         height: 60vh; 
@@ -39,7 +29,7 @@
         background-size: cover;  
         background-repeat: no-repeat;  
         background-position: top;
-        margin: 0 auto;
+        margin: 1em auto;
         border: 1px solid var(--white-color);
         @media screen and (max-width: 800px){
             height: 40%;
@@ -47,15 +37,90 @@
         }
     }
 
-    .newgame-button {
-        font-size: 3em;
+}
+
+
+.newgame-button {
+    font-size: 3em;
+    font-family: 'Good Vibration Regular';
+    font-weight: 300;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 1em;
+    @media screen and (max-width: 800px) {
+        margin-top: 2em;
+    }
+}
+
+.title {
+    font-size: 4em;
+    text-align: center;
+    font-weight: 300;
+    color: var(--white-color);
+    font-family: 'Good Vibration Regular';
+    letter-spacing: normal;
+}
+
+.container-synopsis {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    @media screen and (max-width: 800px) {
+        height: 80vh;
+        
+    }
+}
+.synopsis {
+    text-align: center;
+
+    p {
+        padding: 0.5em;
+        color: var(--white-color);
+    }
+
+    @media screen and (max-width: 800px) {
+        margin-top: 2em;
+    }
+}
+
+.container-character {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    h3 {
         font-family: 'Good Vibration Regular';
         font-weight: 300;
-        display: block;
-        margin: 0 auto;
-        padding-top: 1em;
-        @media screen and (max-width: 800px) {
-            margin-top: 2em;
-        }
+        color: var(--white-color);
+        text-align: center;
+    }
+}
+
+.character-options {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 2em;
+    justify-items: center;
+    justify-content: center;
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+        row-gap: 1em;
+    }
+}
+
+.character-options .character {
+    background-image: url(../../assets/user.jpeg);
+    width: 30vh;
+    height: 60vh;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    border: 1px solid var(--white-color);
+    @media screen and (max-width: 800px) {
+        width: 10vh;
+        height: 30vh;
     }
 }

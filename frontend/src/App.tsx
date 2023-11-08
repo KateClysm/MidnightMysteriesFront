@@ -9,6 +9,8 @@ import PrincipalPage from './pages/principal-page/PrincipalPage';
 import Footer from './components/footer/Footer';
 import Register from './pages/register/Register';
 import Nav from './components/nav/Nav';
+import Synopsis from './pages/new-game/Synopsis';
+import ChooseCharacter from './pages/new-game/ChooseCharacter';
 
 
 const App: React.FC = () => {
@@ -44,7 +46,15 @@ const App: React.FC = () => {
         {
           path: '/newgame',
           element: <NewGame/>
-        }
+        },
+        {
+          path: '/newgame/synopsis',
+          element: <Synopsis/>
+        }, 
+        {
+          path: '/newgame/choose-character',
+          element: <ChooseCharacter/>
+        },
       ]
     },
     {
