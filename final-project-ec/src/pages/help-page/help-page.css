@@ -1,0 +1,135 @@
+* { margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+.help-container{
+    max-width: 75%;
+    margin: auto;
+}
+
+.help-container > p {
+    margin: 2rem 0;
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.help-container > h1 {
+    margin: 2rem 0;
+    text-align: center;
+    color: white;
+}
+
+.help-container button{
+    color: rgb(250, 250, 250);
+    width: 100%;
+    padding: 1.8rem 2.5rem;
+    transition: 0.4s;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+    background-color: black;
+}
+
+.active,
+button:hover {
+    background-color: rgb(37, 35, 35);
+}
+
+button.active{
+    background-color: rgb(37, 35, 35);
+}
+
+.button-question{
+    color: white;
+}
+
+.answer {
+    padding: 0 2rem 2.5rem 2rem;
+    background-color: black;
+    overflow: hidden;
+    display: none;
+}
+
+.answer ul{
+    list-style: none;
+}
+
+.answer li{
+    color: white;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.answer p{
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    padding: 1.2rem 0;
+}
+
+.question{
+    border: 2px solid white;
+    margin: 15px 0;
+}
+
+.question.active{
+    border: none;
+}
+
+@media only screen and (min-width:768px) {
+    .help-container > p {
+        margin: 1.5rem 0;
+        font-size: 1.3rem;
+    }
+    .help-container button{
+        padding: 2rem 2.5rem;
+    }
+    .button-question{
+        font-size: 1.2rem;
+    }
+    .answer p{
+        font-size: 1.2rem;
+    }
+    .question{
+        margin: 20px 0;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .help-container > p {
+        margin: 2rem 0;
+        font-size: 1.3rem;
+    }
+    .help-container button{
+        padding: 2.1rem 2.5rem;
+    }
+    .button-question{
+        font-size: 1.3rem;
+    }
+    .answer p{
+        font-size: 1.3rem;
+    }
+    .question{
+        margin: 25px 0;
+    }
+}
+/*
+footer {
+    text-align: center;
+    background-color: white;
+    color: black;
+    position: absolute;
+    bottom: 0;
+    height: 2rem;
+    width: 100%;
+}*/

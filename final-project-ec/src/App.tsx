@@ -4,6 +4,7 @@ import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Homepage from './pages/homepage/Homepage';
 import Perfil from './pages/perfil/Perfil';
 import NotFound from './pages/not-found/NotFound';
+import HelpPage from './pages/help-page/HelpPage';
 
 
 const App: React.FC = () => {
