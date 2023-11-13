@@ -10,6 +10,7 @@ import PrincipalPage from './pages/principal-page/PrincipalPage';
 import Nav from './components/nav/Nav';
 import Footer from './components/footer/Footer';
 import Register from './pages/register/Register';
+import Login from './pages/login/Login';
 
 
 const App: React.FC = () => {
@@ -47,6 +48,10 @@ const App: React.FC = () => {
     {
       path: '/register',
       element: <Register />
+    },
+    {
+      path: '/login',
+      element: <Login />
     },
     {
       path: '/*',
