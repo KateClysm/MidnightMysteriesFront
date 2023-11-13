@@ -4,14 +4,12 @@ import Footer from '../../components/footer/Footer'
 
 const Register: React.FC = () => {
   return (
-    <><div className='container-register'>
+    <>
+    <div className='container-register'>
+    <h2>Midnight Mysteries</h2>
       <form action=''>
-        <header>
-          <h2>Midnight Mysteries</h2>
-        </header>
         <h3>Sign Up</h3>
         <label>Username</label>
-        <i className="gg-user"></i>
         <input type="text"
           placeholder='Username'
           required />
@@ -35,7 +33,8 @@ const Register: React.FC = () => {
     </div>
     <div>
         <Footer></Footer>
-      </div></>
+      </div>
+      </>
   )
 }
 
