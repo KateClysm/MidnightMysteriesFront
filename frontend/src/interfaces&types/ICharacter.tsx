@@ -5,6 +5,7 @@ export interface ICharacter {
     state: boolean;
     age: number | null;
     relatives: string;
+    ending: string;
 }
 
 export interface IUserCharacter extends ICharacter {
