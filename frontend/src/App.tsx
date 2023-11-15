@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Perfil from './pages/perfil/Perfil';
 import NotFound from './pages/not-found/NotFound';
@@ -8,7 +7,8 @@ import PrincipalPage from './pages/principal-page/PrincipalPage';
 import Nav from './components/nav/Nav';
 import Footer from './components/footer/Footer';
 import Register from './pages/register/Register';
-
+import Landing from './pages/layout-landing/landing/Landing';
+import LayoutLanding from './pages/layout-landing/LayoutLanding';
 
 const App: React.FC = () => {
 
@@ -16,9 +16,7 @@ const App: React.FC = () => {
     return (
       <div className="container-app">
         <Nav />
-        <div className="window">
-          <Outlet />
-        </div>
+        <Outlet />
         <Footer />
       </div>
     );
@@ -27,29 +25,43 @@ const App: React.FC = () => {
   const router = createBrowserRouter([
     {
       path: '/', 
-      element: <LayoutLoggedIn />,
+      element: <LayoutLanding />,
       children: [
         {
           path: '/',
-          element: 
-            <>
-             <PrincipalPage/>
-            </>
+          element: <Landing />
         },
         {
-          path: '/perfil',
+          path: '/register',
+          element: <Register />
+        },
+        {
+          path: '/login',
+          element: <Register />
+        },
+        
+      ]
+    },
+    {
+      path: '/home/', 
+      element: <LayoutLoggedIn />,
+      children: [
+        {
+          path: '/home/',
+          element: <PrincipalPage/>
+        },
+        {
+          path: '/home/perfil',
           element: <Perfil/>
         },
       ]
     },
-    {
-      path: '/register',
-      element: <Register />
-    },
+
     {
       path: '/*',
       element: <NotFound />
     }
+    
   ]);
 
   return (

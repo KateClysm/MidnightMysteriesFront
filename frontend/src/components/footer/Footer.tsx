@@ -71,6 +71,7 @@ const Footer: React.FC = () => {
         <p>|</p>
         <NavLink to="/">LINKTREE</NavLink>
       </div>
+      <p className="footer-description">We're a dedicated team of developers who love creating illustrations, crafting stories, and coding, brought together by our shared passion for horror, psychology, and mystery.</p>
       <p className="copyright">© All rights reserved</p>
     </div>
   );
