@@ -20,6 +20,7 @@
     @media screen and (max-width: 800px) {
         height: 85vh;
         padding: 0;
+        justify-content: space-around;
     }
     
     .art {
@@ -99,15 +100,10 @@
 }
 
 .character-options {
-    display: grid;
-    grid-template-columns: repeat(3, max-content);
-    column-gap: 2em;
+    display: flex;
     justify-items: center;
     justify-content: center;
-    @media screen and (max-width: 800px) {
-        grid-template-columns: 1fr;
-        row-gap: 1em;
-    }
+    
 }
 
 .character-options .character {
@@ -117,10 +113,11 @@
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    
+    margin-right: 1em;
     border: 1px solid var(--white-color);
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 700px) {
         width: 10vh;
-        height: 30vh;
+        height: 40vh;
+        border: none;
     }
 }

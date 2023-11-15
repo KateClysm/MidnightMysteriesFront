@@ -20,7 +20,7 @@ const Nav: React.FC = () => {
   return (
     <div className="container-nav">
         <div className="container-left">
-            <NavLink to="/PrincipalPage" className="nav-item">HOME</NavLink>
+            <NavLink to="/" className="nav-item">HOME</NavLink>
             {hasGameInProgress ? null : <NavLink to="/PlayGame">PLAY</NavLink>}
             {hasGameInProgress ? <NavLink to="/newgame">NEW GAME</NavLink> : null}
             <button onClick={() => handleSave()} className="nav-item">SAVE GAME</button>
@@ -28,7 +28,7 @@ const Nav: React.FC = () => {
 
         <div className="container-right">
             <button onClick={() => handleLogOut()} className="nav-item">LOGOUT</button>
-            <NavLink to="/perfil" className="user-icon-container">
+            <NavLink to="/profile" className="user-icon-container">
                 <FontAwesomeIcon icon={faCircleUser} />
             </NavLink>
         </div>
