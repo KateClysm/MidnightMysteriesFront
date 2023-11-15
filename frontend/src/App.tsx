@@ -9,6 +9,7 @@ import Footer from './components/footer/Footer';
 import Register from './pages/register/Register';
 import Landing from './pages/layout-landing/landing/Landing';
 import LayoutLanding from './pages/layout-landing/LayoutLanding';
+import ExampleMobile from './pages/example-mobile-first/ExampleMobile';
 
 const App: React.FC = () => {
 
@@ -51,16 +52,22 @@ const App: React.FC = () => {
           element: <PrincipalPage/>
         },
         {
-          path: '/home/perfil',
+          path: '/home/profile',
           element: <Perfil/>
         },
       ]
     },
 
     {
+      path: '/examplemobile',
+      element: <ExampleMobile />
+    },
+
+
+    {
       path: '/*',
       element: <NotFound />
-    }
+    },
     
   ]);
 

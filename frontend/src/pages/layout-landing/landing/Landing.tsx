@@ -23,7 +23,7 @@ const Landing: React.FC = () => {
       return () => {
         clearTimeout(timeoutTitle);
       };
-    }, 2000);
+    }, 3000);
 
     return () => {
       clearTimeout(fade);
