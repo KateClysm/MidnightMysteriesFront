@@ -1,0 +1,191 @@
+.container-landing{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: var(--white-color);
+    h1{
+        padding: 0 2rem;
+    }
+
+    .title-opacity, .description-opacity{
+        height: 100vh;
+    }
+    .title-opacity{
+        opacity: 1;
+        &.fade-out {
+            opacity: 0;
+            transition: opacity 4s ease-in-out; 
+            }
+    }
+    .description-opacity{
+        &.fade-in {
+            opacity: 1;
+            animation: fadeIn 6s;
+        }
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% { opacity: 1;}
+        }
+    }
+
+
+    .container-description{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        row-gap: 2rem;
+    
+        .description{
+            width: 80%;
+        }
+        .access{
+            display: flex;
+            flex-direction: column;
+           align-items: center;
+           row-gap: 0.5rem;
+    
+    
+            .buttons{
+                display: flex;
+                column-gap: 0.5rem;
+
+
+                // .nav-item {
+                //     position: relative;
+                //     overflow: hidden;
+                //     color: #ffffff;
+                //     text-decoration: none;
+                //     padding: 0.6rem 1rem;
+                //     border-radius: 0.5rem;
+                //     background: transparent;
+                //     transition: background 0.3s ease;
+                  
+                //     &:hover {
+                //       background: radial-gradient(ellipse at center , var(--blood-color) 70%, transparent 50%);
+                //       background-size: 100% 800%;
+                //       animation: fillAnimation 1s ease-in 1 forwards;
+                //     }
+                //   }
+                  
+                //   @keyframes fillAnimation {
+                //     0% {
+                //       background-position: 10% 0%;
+                //     }
+                //     100% {
+                //       background-position: 0% 100%;
+                //     }
+                //   }
+
+                // .nav-item {
+                //     position: relative;
+                //     overflow: hidden;
+                //     color: #ffffff;
+                //     text-decoration: none;
+                //     padding: 0.6rem 1rem;
+                //     border-radius: 0.5rem;
+                //     background: transparent;
+                //     transition: background 0.3s ease;
+                  
+                //     &:hover {
+                //       background: radial-gradient(ellipse at bottom , var(--blood-color) 80%, transparent 50%);
+                //       background-size: 100% 800%;
+                //       animation: fillAnimation 1s ease-in 1 forwards;
+                //     }
+                //   }
+                  
+                //   @keyframes fillAnimation {
+                //     0% {
+                //       background-position: 10% 0%;
+                //     }
+                //     100% {
+                //       background-position: 0% 100%;
+                //     }
+                //   }
+
+                // .nav-item {
+                //     position: relative;
+                //     overflow: hidden;
+                //     color: #ffffff;
+                //     text-decoration: none;
+                //     padding: 0.6rem 1rem;
+                //     border-radius: 0.5rem;
+                //     background: transparent;
+                //     transition: background 0.3s ease;
+                  
+                //     &:hover {
+                //       background: radial-gradient(ellipse at bottom , var(--blood-color) 80%, transparent 50%);
+                //       background-size: 50% 800%;
+                //       animation: fillAnimation 0.5s ease-in 1 forwards;
+                //     }
+                //   }
+                  
+                //   @keyframes fillAnimation {
+                //     0% {
+                //       background-position: 10% 0%;
+                //     }
+                //     100% {
+                //       background-position: 0% 100%;
+                //     }
+                //   }
+
+               .nav-item {
+                    position: relative;
+                    overflow: hidden;
+                    color: #ffffff;
+                    text-decoration: none;
+                    padding: 0.6rem 1rem;
+                    border-radius: 0.5rem;
+                    background: transparent;
+                    transition: background 0.3s ease;
+                  
+                    &:hover {
+                      background: radial-gradient(ellipse at center bottom , var(--blood-color) 70%, transparent 50%);
+                      background-size: 100% 800%;
+                      animation: fillAnimation 0.5s ease-in 1 forwards;
+                    }
+                  }
+                  
+                  @keyframes fillAnimation {
+                    0% {
+                      background-position: 10% 0%;
+                    }
+                    100% {
+                      background-position: 0% 100%;
+                    }
+                  }
+
+                  .nav-item {
+                    position: relative;
+                    overflow: hidden;
+                    color: #ffffff;
+                    text-decoration: none;
+                    padding: 0.6rem 1rem;
+                    border-radius: 0.5rem;
+                    background: transparent;
+                    transition: background 0.3s ease;
+                  
+                    &:hover {
+                      background: radial-gradient(ellipse at center bottom , var(--blood-color) 70%, transparent 50%);
+                      background-size: 100% 800%;
+                      animation: fillAnimation 0.5s ease-in 1 forwards;
+                    }
+                  }
+                  
+                  @keyframes fillAnimation {
+                    0% {
+                      background-position: 10% 0%;
+                    }
+                    100% {
+                      background-position: 0% 100%;
+                    }
+                  }
+            }
+
+        }
+
+        
+    }
+}

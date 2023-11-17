@@ -1,25 +1,35 @@
 import React from 'react';
 import './App.css';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Perfil from './pages/perfil/Perfil';
 import NotFound from './pages/not-found/NotFound';
 import PrincipalPage from './pages/principal-page/PrincipalPage';
 import Nav from './components/nav/Nav';
 import Footer from './components/footer/Footer';
-import Register from './pages/register/Register';
-import Landing from './pages/layout-landing/landing/Landing';
-import LayoutLanding from './pages/layout-landing/LayoutLanding';
 import ExampleMobile from './pages/example-mobile-first/ExampleMobile';
+import Perfil from './pages/perfil/Perfil';
+
+import Login from './pages/login/Login';
+import Register from './pages/register/Register';
+import Landing from './pages/landing/Landing';
 
 const App: React.FC = () => {
 
   const LayoutLoggedIn = () => {
     return (
-      <div className="container-app">
+      <>
         <Nav />
         <Outlet />
         <Footer />
-      </div>
+      </>
+    );
+  };
+
+  const LayoutLanding = () => {
+    return (
+      <>
+        <Outlet />
+        <Footer />
+      </>
     );
   };
 
@@ -38,7 +48,7 @@ const App: React.FC = () => {
         },
         {
           path: '/login',
-          element: <Register />
+          element: <Login />
         },
         
       ]
@@ -62,7 +72,6 @@ const App: React.FC = () => {
       path: '/examplemobile',
       element: <ExampleMobile />
     },
-
 
     {
       path: '/*',

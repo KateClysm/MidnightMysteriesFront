@@ -1,0 +1,75 @@
+.container-spiral-background{
+  
+    .container-component{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .spiral-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 50;
+        overflow: hidden;
+    
+        .spiral-image {
+            position: absolute;
+            height: auto;
+            width: 80vw;
+          }
+          
+        .spiral-image1 {
+          top: -20%;
+          right: -35%;
+          animation: rotate-left 10s linear infinite;
+        }
+        
+        .spiral-image2 {
+          bottom: -20%;
+          left: -35%;
+          animation: rotate-right 10s linear infinite;
+        }
+      } 
+}
+
+@keyframes rotate-left {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate-right {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container-spiral-background {
+    .spiral-container {
+      .spiral-image {
+        width: 40vw;
+      }
+
+      .spiral-image1 {
+        top: -35%;
+        right: -16%;
+      }
+
+      .spiral-image2 {
+        bottom: -35%;
+        left: -16%;
+      }
+    }
+  }
+}
