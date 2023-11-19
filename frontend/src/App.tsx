@@ -1,56 +1,84 @@
 import React from 'react';
 import './App.css';
-
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Perfil from './pages/perfil/Perfil';
-import Profile from './pages/profile/profile';
 import NotFound from './pages/not-found/NotFound';
 import PrincipalPage from './pages/principal-page/PrincipalPage';
 import Nav from './components/nav/Nav';
 import Footer from './components/footer/Footer';
-import Register from './pages/register/Register';
 
+import Register from './pages/register/Register';
 
 const App: React.FC = () => {
 
   const LayoutLoggedIn = () => {
     return (
-      <div className="container-app">
+      <>
         <Nav />
-        <div className="window">
-          <Outlet />
-        </div>
+        <Outlet />
         <Footer />
-      </div>
+      </>
+    );
+  };
+
+  const LayoutLanding = () => {
+    return (
+      <>
+        <Outlet />
+        <Footer />
+      </>
     );
   };
 
   const router = createBrowserRouter([
     {
       path: '/', 
-      element: <LayoutLoggedIn />,
+      element: <LayoutLanding />,
       children: [
         {
           path: '/',
-          element: 
-            <>
-             <PrincipalPage/>
-            </>
+          element: <Landing />
         },
         {
-          path: '/profile',
-          element: <Profile/>
+          path: '/register',
+          element: <Register />
         },
+        {
+          path: '/login',
+          element: <Login />
+        },
+        
       ]
     },
     {
-      path: '/register',
-      element: <Register />
+      path: '/home/', 
+      element: <LayoutLoggedIn />,
+      children: [
+        {
+          path: '/home/',
+          element: <PrincipalPage/>
+        },
+        {
+          path: '/home/profile',
+          element: <Perfil/>
+        },
+      ]
     },
+
+    {
+      path: '/examplemobile',
+      element: <ExampleMobile />
+    },
+
+    {
+      path: '/examplepattern',
+      element: <ExamplePattern />
+    },
+
     {
       path: '/*',
       element: <NotFound />
-    }
+    },
+    
   ]);
 
   return (
