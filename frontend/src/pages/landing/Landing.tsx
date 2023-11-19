@@ -2,7 +2,6 @@ import './landing.scss';
 import SpiralBackground from "../../components/spiral-background/SpiralBackground";
 import { useEffect, useState } from "react";
 import BloodButton from "../../components/blood-button/BloodButton";
-import React from 'react';
 
 const Landing = () => {
     const [showTitle, setShowTitle] = useState(true);
@@ -26,7 +25,6 @@ const Landing = () => {
       };
     }, []);
   
-
     return (
       <div className="container-landing">
         {showTitle && (
