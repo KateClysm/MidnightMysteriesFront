@@ -14,20 +14,15 @@
     --font-size-huge-desktop: 20px;
 }
   
-/* Reset de estilos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: 'Amatic SC', sans-serif; */
-    /* font-family: 'Inter', sans-serif; */
-    /* font-family: 'Roboto Flex', sans-serif; */
-    /* font-family: 'Work Sans', sans-serif; */
-    font-family: 'Quicksand', sans-serif;
+    /* font-family: 'Amatic SC', sans-serif;  */
+     font-family: 'Quicksand', sans-serif; 
 }
   
   body{
-    /* background-image: linear-gradient(180deg, var(--grey-color) 0%, var(--black-color) 80% ); */
     background-color: var(--black-color);
     background-attachment: fixed;
 }
@@ -37,7 +32,6 @@
     background-size: contain;
     width: 100%;
     background-repeat: no-repeat;
-    /* background-size: cover; */
 }
 
   

@@ -11,6 +11,7 @@ import Perfil from './pages/perfil/Perfil';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import Landing from './pages/landing/Landing';
+import ExamplePattern from './pages/example-pattern/ExamplePattern';
 
 const App: React.FC = () => {
 
@@ -71,6 +72,11 @@ const App: React.FC = () => {
     {
       path: '/examplemobile',
       element: <ExampleMobile />
+    },
+
+    {
+      path: '/examplepattern',
+      element: <ExamplePattern />
     },
 
     {

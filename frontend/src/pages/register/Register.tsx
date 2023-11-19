@@ -3,7 +3,6 @@ import { z, ZodType } from 'zod';
 import { useForm } from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import './register.scss';
-import Footer from '../../components/footer/Footer';
 
 type formData = {
   userName: string;
@@ -35,7 +34,6 @@ const Register: React.FC = () => {
       }
 
   return (
-    <>
     <div className='container-register'>
     <h2>Midnight Mysteries</h2>
       <form onSubmit={handleSubmit(submitData)}>
@@ -66,10 +64,6 @@ const Register: React.FC = () => {
         </div>
       </form>
     </div>
-    <div>
-        <Footer></Footer>
-      </div>
-      </>
   )
 }
 
