@@ -1,8 +1,12 @@
+@import url(../../app.css);
+
 .container_profile {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: auto;
 
     main {
         width: 100%;
@@ -21,10 +25,14 @@
         .container_img {
             background-color: white;
             height: 76vh;
-            width: 30vh;
+            width: 60%;
             background-size: cover;
             background-position-y: start;
             background-position-x: center;
+
+            @media screen and (min-width: 600px) {
+                width: 30vh;
+            }
         }
 
         .container_cards {
@@ -33,12 +41,14 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
+            grid: 1px;
             padding: 30px 0px;
-            height: 75vh;
+            
 
             @media screen and (min-width: 600px) {
-                width: 30%;
+                width: 40%;
                 padding: 0px;
+                height: 75vh;
             }
             
 
@@ -57,24 +67,34 @@
                 }
 
                 &_title {
-                    font-size: 1.6rem;
-                    font-weight: 900;
+                    letter-spacing: 3px;
+                    font-size: 2.2rem;
+                    font-weight: 600;
+                    font-family: 'Bigelow Rules', serif;
                     border-bottom: 2px solid white;
                     padding: 20px 30px;
                     text-align: start;
                     background-color: #80808027;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
         
                 }
         
                 &_list_data {
                     padding: 15px 30px;
                     list-style: none;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
         
                 &_sub_title {
                     padding: 5px 0px;
-                    font-size: 1.2rem;
-                    font-weight: 700;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                    font-family: 'Bigelow Rules', serif;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
         
                     span {
                         padding-left: 5px;
@@ -92,6 +112,7 @@
             font-size: 1rem;
             font-style: italic;
             display: inline;
+            font-family: 'Josefin Slab', serif;
         }
     }
 }
