@@ -1,5 +1,6 @@
 import React from 'react';
-import '../help-page/help-page.css';
+import '../help-page/help-page.scss';
+// import '../../App.scss';
 
 const HelpPage: React.FC = () => {
   const handleButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -14,7 +15,6 @@ const HelpPage: React.FC = () => {
       question.style.display = 'block';
     }
   };
-
 
   return (
    <div className="help-container">
