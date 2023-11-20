@@ -1,21 +1,32 @@
-import React from 'react'
+import React from "react";
+import BloodButton from "../../components/blood-button/BloodButton";
+import '../register/register.scss';
+import { NavLink } from "react-router-dom";
 
 const Login: React.FC = () => {
   return (
-      <div className="container-register">
-        <h2>Midnight Mysteries</h2>
+    <div className="container-register">
+      <h1>MIDNIGHT MYSTERIES</h1>
+
+      <div className="container-form">
+        <h2>SIGN IN</h2>
+
         <form action="">
-          <h3>Sign In</h3>
           <label>Email@gmail.com</label>
           <input type="text" placeholder="Email@gmail.com" required />
           <label>Password</label>
           <input type="password" placeholder="Password" required />
-          <div className="btn">
-            <button className="button"> Sign In</button>
-          </div>
+          <BloodButton buttonName="SIGN UP" type="submit" />
         </form>
+        
+
+        <div className="redirect">
+          <p>You don't have an account?</p>
+          <NavLink to="/register">Register</NavLink>
+        </div>
       </div>
+    </div>
   );
-}
+};
 
 export default Login;

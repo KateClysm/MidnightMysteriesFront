@@ -1,4 +1,5 @@
 .blood-btn{
+    border: 1px solid var(--white-color);
     background: none;
     padding: 0.3rem 0.8rem;
     font-size: 20px;
@@ -8,24 +9,25 @@
     overflow: hidden;
     border-radius: 0.3rem;
 
-    &:hover{
+    &:hover {
         color: var(--white-color);
+        &::before {
+          height: 180%;
+          
+        }
       }
-      &::before{
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 0%;
-        background: var(--blood-color);
-        z-index: -1;
-        transition: 1.5s;
-      }
-      &::before{
-        top: 0;
-        border-radius: 0 0 50% 50%;
-      }
-      &:hover::before{
-        height: 180%;
-      }
-  }
+    
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      background: var(--blood-color);
+      z-index: -1;
+      transition: 1.5s;
+      top: 0;
+      border-radius: 0 0 50% 50%;
+    }
+
+}

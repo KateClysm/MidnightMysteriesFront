@@ -6,12 +6,9 @@ import PrincipalPage from './pages/principal-page/PrincipalPage';
 import Nav from './components/nav/Nav';
 import Footer from './components/footer/Footer';
 import Register from './pages/register/Register';
-
 import Landing from './pages/landing/Landing';
 import Login from './pages/login/Login';
 import Profile from './pages/profile/profile';
-import ExampleMobile from './pages/example-mobile-first/ExampleMobile'
-import ExamplePattern from './pages/example-pattern/ExamplePattern'
 
 const App: React.FC = () => {
 
@@ -67,16 +64,6 @@ const App: React.FC = () => {
           element: <Profile/>
         },
       ]
-    },
-
-    {
-      path: '/examplemobile',
-      element: <ExampleMobile />
-    },
-
-    {
-      path: '/examplepattern',
-      element: <ExamplePattern />
     },
 
     {

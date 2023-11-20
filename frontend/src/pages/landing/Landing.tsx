@@ -1,7 +1,7 @@
 import './landing.scss';
 import SpiralBackground from "../../components/spiral-background/SpiralBackground";
 import { useEffect, useState } from "react";
-import BloodButton from "../../components/blood-button/BloodButton";
+import BloodNavLink from '../../components/blood-button/BloodNavLink';
 
 const Landing = () => {
     const [showTitle, setShowTitle] = useState(true);
@@ -61,8 +61,8 @@ const Landing = () => {
               <div className="access">
                 <p>You need an account to Play</p>
                 <div className="buttons">
-                  <BloodButton route="/register" buttonName="REGISTER" />
-                  <BloodButton route="/login" buttonName="LOGIN" />
+                  <BloodNavLink route="/register" buttonName="REGISTER" />
+                  <BloodNavLink route="/login" buttonName="LOGIN" />
                 </div>
               </div>
             </div>
