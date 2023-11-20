@@ -59,8 +59,13 @@ button, a, .footer-icon, .user-icon{
     cursor: pointer;
     color: var(--white-color);
     &:hover{
-        color: var(--blood-color);
         transition: 0.3s;
+    }
+}
+a, .footer-icon, .user-icon{
+    color: var(--white-color);
+    &:hover{
+        color: var(--blood-color);
     }
 }
 button{
