@@ -1,8 +1,7 @@
 import React from "react";
 import './nav.scss';
 import { NavLink } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
+import { FaCircleUser } from 'react-icons/fa6';
 
 const Nav: React.FC = () => {
 
@@ -29,7 +28,7 @@ const Nav: React.FC = () => {
         <div className="container-right">
             <button onClick={() => handleLogOut()} className="nav-item">LOGOUT</button>
             <NavLink to="/profile" className="user-icon-container">
-                <FontAwesomeIcon icon={faCircleUser} />
+                <FaCircleUser className="user-icon"/>
             </NavLink>
         </div>
     </div>

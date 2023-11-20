@@ -1,5 +1,6 @@
 .container-principal-page{
-    height: 100vh;
+    margin-top: 35%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,9 +12,10 @@
     }
 
     .container-game{
+        margin-top: 10%;
         background-color: var(--transparent-black-color);
         width: 95%;
-        height: 80%;
+        height: 30rem;
         border: 1px solid var(--white-color);
         border-radius: 0.3rem; 
         display: flex; 
@@ -41,7 +43,7 @@
     }
     
     .resume-game{
-        padding: 1rem;
+        padding: 1.5rem;
         
     }
 }

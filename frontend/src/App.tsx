@@ -1,8 +1,13 @@
 import React from 'react';
+<<<<<<< HEAD
 import './app.css';
 
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Profile from './pages/profile/profile';
+=======
+import './App.css';
+import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
+>>>>>>> origin/main
 import NotFound from './pages/not-found/NotFound';
 import PrincipalPage from './pages/principal-page/PrincipalPage';
 import Nav from './components/nav/Nav';
@@ -35,28 +40,41 @@ const exampleUser: TUser = {
 };
 
 
+import Landing from './pages/landing/Landing';
+import Login from './pages/login/Login';
+import Profile from './pages/profile/profile';
+import ExampleMobile from './pages/example-mobile-first/ExampleMobile'
+import ExamplePattern from './pages/example-pattern/ExamplePattern'
 
 const App: React.FC = () => {
 
   const LayoutLoggedIn = () => {
     return (
-      <div className="container-app">
+      <>
         <Nav />
-        <div className="window">
-          <Outlet />
-        </div>
+        <Outlet />
         <Footer />
-      </div>
+      </>
+    );
+  };
+
+  const LayoutLanding = () => {
+    return (
+      <>
+        <Outlet />
+        <Footer />
+      </>
     );
   };
 
   const router = createBrowserRouter([
     {
       path: '/', 
-      element: <LayoutLoggedIn />,
+      element: <LayoutLanding />,
       children: [
         {
           path: '/',
+<<<<<<< HEAD
           element: 
             <>
               <PrincipalPage/>
@@ -65,17 +83,51 @@ const App: React.FC = () => {
         {
           path: '/profile',
           element: <Profile userCharacter={exampleCharacter} playerProfile={exampleUser}/>
+=======
+          element: <Landing />
         },
+        {
+          path: '/register',
+          element: <Register />
+        },
+        {
+          path: '/login',
+          element: <Login />
+        },
+        
       ]
     },
     {
-      path: '/register',
-      element: <Register />
+      path: '/home/', 
+      element: <LayoutLoggedIn />,
+      children: [
+        {
+          path: '/home/',
+          element: <PrincipalPage/>
+        },
+        {
+          path: '/home/profile',
+          element: <Profile/>
+>>>>>>> origin/main
+        },
+      ]
     },
+
+    {
+      path: '/examplemobile',
+      element: <ExampleMobile />
+    },
+
+    {
+      path: '/examplepattern',
+      element: <ExamplePattern />
+    },
+
     {
       path: '/*',
       element: <NotFound />
-    }
+    },
+    
   ]);
 
   return (
