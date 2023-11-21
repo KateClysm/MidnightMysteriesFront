@@ -16,12 +16,13 @@ const Profile: React.FC = () => {
 
   // Ejemplo
 const Character: ICharacter= {
+  id: "1",
   image: UrlImage,
+  phrase: "",
   name: "David",
   sanity: "Alive",
   state: true,
   age: 16,
-  relatives: "",
   ending: "End 1",
 };
 
