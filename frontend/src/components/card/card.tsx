@@ -1,35 +1,25 @@
 import React from "react";
-import './card.css';
-
-interface CardProps {
-  title: string;
-  first_sub_title: string;
-  second_sub_title: string;
-  third_sub_title: string;
-  fourth_sub_title: string;
-  playtime: string;
-  first_data: string;
-  second_data: string;
-  third_data: string;
-  fourth_data: string;
-}
+import './card.scss';
+import { FaCircle } from "react-icons/fa";
+import { ICharacter } from "../../interfaces&types/ICharacter";
 
 
+const Card: React.FC<ICharacter> = (props) => {
 
-const Card : React.FC<CardProps> = (props) => {
-  const { title, first_sub_title, second_sub_title, third_sub_title, fourth_sub_title, playtime, first_data, second_data, third_data, fourth_data } = props;
   return (
-    <div className="container_card">
-      <div className="card">
-        <h2 className="card_title">{title}</h2>
-        <ul className="card_list_data">
-          <li><p className="card_sub_title">{first_sub_title}: <span>{first_data}</span></p></li>
-          <li><p className="card_sub_title">{second_sub_title}: <span>{second_data}</span></p></li>
-          <li><p className="card_sub_title">{third_sub_title}: <span>{third_data}</span></p></li>
-          <li><p className="card_sub_title">{fourth_sub_title}: <span>{fourth_data}</span></p></li>
-          <li><p className="playtime">{playtime}</p></li>
-        </ul>
+    <div className="card">
+      <div className="face face_front">
+        <img src={props.image} alt="Character_photo" />
       </div>
+      <div className="face face_back">
+        <FaCircle className="circle"/>
+        <h3>{props.name}</h3>
+        <p className="face__back__phrase">"{props.phrase}"</p>       
+        <p className="face__back__fact"><span>AGE:</span> {props.age}</p>     
+        <p className="face__back__fact"><span>SANITY:</span> {props.sanity}</p>
+        {props.state? (<p className="face__back__fact"><span>STATE:</span> Alive</p>):(<p className="face__back__fact"><span>STATE:</span> dead</p>)}
+        <p className="face__back__fact"><span>ENDING:</span> {props.ending}</p>            
+        </div>
     </div>
   );
 };
