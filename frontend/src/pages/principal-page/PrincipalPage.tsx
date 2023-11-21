@@ -1,5 +1,6 @@
 import React from "react";
 import './principalpage.scss';
+import BloodButton from "../../components/blood-button/BloodButton";
 
 const PrincipalPage: React.FC = () => {
 
@@ -13,7 +14,7 @@ const PrincipalPage: React.FC = () => {
         <div className="provitional-ilustration"></div>
       </div>
 
-      <button className="resume-game">RESUME GAME</button>
+      <BloodButton buttonName="RESUME GAME" type="submit" />
     </div>
   );
 };

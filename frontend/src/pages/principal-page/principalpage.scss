@@ -1,11 +1,12 @@
 .container-principal-page{
-    margin-top: 35%;
     height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: var(--white-color);
     text-align: center;
+    margin-top: 30%;
+    padding-bottom: 2rem;
 
     h1{
         padding: 1rem;
@@ -14,14 +15,14 @@
     .container-game{
         margin-top: 10%;
         background-color: var(--transparent-black-color);
-        width: 95%;
+        width: 85%;
         height: 30rem;
         border: 1px solid var(--white-color);
-        border-radius: 0.3rem; 
+        border-radius: 0.5rem; 
         display: flex; 
         flex-direction: column; 
         justify-content: space-between; 
-        
+        margin-bottom: 2rem;
         align-items: center;
 
         p { 
@@ -35,11 +36,7 @@
             background-size: cover;  
             background-repeat: no-repeat;  
             background-position: top;   
-
-
         }
-
-        
     }
     
     .resume-game{
