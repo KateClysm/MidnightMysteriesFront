@@ -1,5 +1,6 @@
 import React from 'react';
 import '../help-page/help-page.scss';
+import ButtonHelp from '../../components/button-help/buttonHelp';
 // import '../../App.scss';
 
 const HelpPage: React.FC = () => {
@@ -24,19 +25,20 @@ const HelpPage: React.FC = () => {
       <div className="question">
        <button className="button-question" onClick={handleButtonClick}>
           Who are we?
-      </button>
-      <div className= "answer">
-        <p> Welcome to "Midnight Mysteries"! We are a team of enthusiastic young developers who have created this thrilling mystery-solving game, challenging you to uncover the hidden killer among us. Our primary aim is to provide you with the most enjoyable and immersive experience while playing this exciting mystery-solving game. To ensure you have a great time, we have provided some helpful instructions and tips.</p>
+       </button>
+       <div className= "answer">
+         <p> Welcome to "Midnight Mysteries"! We are a team of enthusiastic young developers who have created this thrilling mystery-solving game, challenging you to uncover the hidden killer among us. Our primary aim is to provide you with the most enjoyable and immersive experience while playing this exciting mystery-solving game. To ensure you have a great time, we have provided some helpful instructions and tips.</p>
+       </div>
       </div>
-    </div>
-    <div className="question">
+      <div className="question">
         <button className="button-question" onClick={handleButtonClick}>
           Mental Health
         </button>
         <div className="answer">
           <p> "Midnight Mysteries" is a fictional and interactive mystery-solving game designed for entertainment purposes. It contains themes related to solving mysteries, including elements of suspense and crime. Please be aware that some players may find the content intense or emotionally challenging. Your well-being is important to us, and we encourage you to prioritize your mental health while enjoying the game.</p>
         </div>
-      </div><div className="question">
+      </div>
+      <div className="question">
         <button className="button-question" onClick={handleButtonClick}>
           How to play?
         </button>
@@ -50,7 +52,8 @@ const HelpPage: React.FC = () => {
             <li> 5. Beggin the game and resolve the case!</li>
           </ul>
         </div>
-      </div><div className="question">
+      </div>
+      <div className="question">
         <button className="button-question" onClick={handleButtonClick}>
           How to create an account?
         </button>
@@ -64,6 +67,7 @@ const HelpPage: React.FC = () => {
           </ul>
         </div>
       </div>
+      <ButtonHelp/>
   </div>
  );
 };
