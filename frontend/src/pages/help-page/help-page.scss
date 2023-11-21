@@ -1,4 +1,4 @@
- @import '../../App.scss';
+//  @import '../../App.scss';
 
 * { margin: 0; 
     padding: 0;
@@ -13,17 +13,17 @@
     p{
         margin: 2rem 0;
         text-align: center;
-        color: $white-color;
+        color: var(--white-color);
     }
 
     h1 {
         margin: 2rem 0;
         text-align: center;
-        color: $white-color;
+        color: var(--white-color);
     }
 
     button{
-        color: $white-color;
+        color: var(--white-color);
         width: 100%;
         padding: 1.8rem 2.5rem;
         transition: 0.4s;
@@ -34,26 +34,26 @@
         justify-content: flex-start;
         align-items: center;
         font-weight: bold;
-        background-color: $black-color;
+        background-color: var(--black-color);
     }
 
 }
 
 .active,
 button:hover {
-    background-color: $night-color;
+    background-color: var(--grey-color);
 }
 
 button.active{
-    background-color: $black-color;
+    background-color: var(--black-color);
 }
 
 .button-question{
-    color: $white-color
+    color: var(--white-color);
 }
 .answer {
     padding: 0 2rem 2.5rem 2rem;
-    background-color: $transparent-black-color;
+    background-color: var(--transparent-black-color);
     overflow: hidden;
     display: none;
 
@@ -62,19 +62,19 @@ button.active{
     }
 
     li{
-        color: $white-color;
+        color: var(--white-color);
         padding: 0.5rem 0;
     }
 
     p{
-        color: $white-color;
+        color: var(--white-color);
         line-height: 1.4;
         padding: 1.2rem 0;
     }
 }
 
 .question{
-    border: 1px solid $white-color;
+    border: 1px solid var(--white-color);
     margin: 15px 0;
 }
 
