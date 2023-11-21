@@ -1,0 +1,17 @@
+@import url(../../app.css);
+
+.container_characters{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .container_characters_title{
+        padding: 60px 0px;
+        font-size: 5rem;
+        font-weight: 600;
+        letter-spacing: 6px;
+        color: var(--white-color);
+    }
+}

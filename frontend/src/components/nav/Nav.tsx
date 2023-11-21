@@ -1,11 +1,15 @@
 import React from "react";
 import './nav.scss';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { FaCircleUser } from 'react-icons/fa6';
 
 const Nav: React.FC = () => {
 
-    // const [hasGameInProgress, setHasGameInProgress] = useState(false);
+    const location = useLocation();
+    const isProfileOrCharacters =
+    location.pathname.includes('/home/profile') ||
+    location.pathname.includes('/home/characters');
+
     const hasGameInProgress = true;
 
     const handleSave = () => {
@@ -17,17 +21,17 @@ const Nav: React.FC = () => {
     };
 
   return (
-    <div className="container-nav">
+    <div className={`container-nav ${isProfileOrCharacters ? 'white-nav' : ''}`}>
         <div className="container-left">
-            <NavLink to="/" className="nav-item">HOME</NavLink>
-            {hasGameInProgress ? null : <NavLink to="/PlayGame">PLAY</NavLink>}
-            {hasGameInProgress ? <NavLink to="/NewGame">NEW GAME</NavLink> : null}
+            <NavLink to="/home" className="nav-item">HOME</NavLink>
+            {hasGameInProgress ? null : <NavLink to="/playGame">PLAY</NavLink>}
+            {hasGameInProgress ? <NavLink to="/newGame">NEW GAME</NavLink> : null}
             <button onClick={() => handleSave()} className="nav-item">SAVE GAME</button>
         </div>
 
         <div className="container-right">
             <button onClick={() => handleLogOut()} className="nav-item">LOGOUT</button>
-            <NavLink to="/profile" className="user-icon-container">
+            <NavLink to="/home/profile" className="user-icon-container">
                 <FaCircleUser className="user-icon"/>
             </NavLink>
         </div>

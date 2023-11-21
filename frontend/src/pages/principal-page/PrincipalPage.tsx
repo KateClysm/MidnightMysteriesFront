@@ -8,7 +8,7 @@ const PrincipalPage: React.FC = () => {
     <div className="container-principal-page">
 
       {/* <h1>MIDNIGHT MYSTERIES</h1> */}
-
+      <div className="flashlight-container"></div>
       <div className="container-game">
         <p>There's a killer among us, would you be able to catch them?</p>
         <div className="provitional-ilustration"></div>

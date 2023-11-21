@@ -3,7 +3,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    
+    height: 3.5rem;
+    position: relative;
+    z-index: 101;
     .container-left, .container-right{
         display: flex;
         align-items: center;
@@ -31,4 +33,14 @@
     }
 
     
+}
+
+.white-nav{
+    a, button, .user-icon{ 
+        color: var(--white-color); 
+
+        &:hover{ 
+            color: var(--blood-color); 
+        } 
+    }
 }

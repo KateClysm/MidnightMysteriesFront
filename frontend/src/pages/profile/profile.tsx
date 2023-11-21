@@ -4,7 +4,7 @@ import { ICharacter } from "../../interfaces&types/ICharacter";
 import { TUser } from "../../interfaces&types/TUser";
 import UrlImage from '../../assets/user.jpeg';
 
-const Perfil: React.FC = () => {
+const Profile: React.FC = () => {
   /*if (!userCharacter && !playerProfile) {
     return (
       <div>
@@ -16,12 +16,13 @@ const Perfil: React.FC = () => {
 
   // Ejemplo
 const Character: ICharacter= {
+  id: "1",
   image: UrlImage,
+  phrase: "",
   name: "David",
   sanity: "Alive",
   state: true,
   age: 16,
-  relatives: "",
   ending: "End 1",
 };
 
@@ -72,4 +73,4 @@ const User: TUser = {
   );
 };
 
-export default Perfil;
+export default Profile;
