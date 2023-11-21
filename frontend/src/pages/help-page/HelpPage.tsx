@@ -1,7 +1,8 @@
 import React from 'react';
 import '../help-page/help-page.scss';
+import '../../app.css';
 import ButtonHelp from '../../components/button-help/buttonHelp';
-// import '../../App.scss';
+
 
 const HelpPage: React.FC = () => {
   const handleButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -67,7 +68,9 @@ const HelpPage: React.FC = () => {
           </ul>
         </div>
       </div>
-      <ButtonHelp/>
+      {/* <>
+      <ButtonHelp />
+      </> */}
   </div>
  );
 };
