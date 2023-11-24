@@ -10,11 +10,11 @@ const Nav: React.FC = () => {
     const hasGameInProgress = true;
 
     const handleSave = () => {
-        console.log('Game Saved')
+        console.log('Game Saved');
     };
 
     const handleLogOut = () => {
-        console.log('User Logged Out')
+        console.log('User Logged Out');
     };
 
   return (
