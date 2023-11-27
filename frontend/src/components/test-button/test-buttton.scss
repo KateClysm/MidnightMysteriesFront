@@ -1,0 +1,24 @@
+.test-button{
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    background-color: var(--blood-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    z-index: 1;
+  
+    &:hover {
+      background-color: var(--black-color);
+      border: 0.1rem solid var(--white-color);
+    }
+  }

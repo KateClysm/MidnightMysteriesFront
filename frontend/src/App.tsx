@@ -9,7 +9,9 @@ import Register from './pages/register/Register';
 import Landing from './pages/landing/Landing';
 import Login from './pages/login/Login';
 import Profile from './pages/profile/profile';
-import ButtonHelp from './components/button-help/buttonHelp';
+// import ButtonHelp from './components/button-help/buttonHelp';
+import Help from './pages/help-page/Help';
+import TestButton from './components/test-button/TestButton';
 
 const App: React.FC = () => {
 
@@ -18,7 +20,7 @@ const App: React.FC = () => {
       <div className='homepage-container'>
         <Nav />
         <Outlet />
-        <ButtonHelp/>
+        <TestButton/>
         <Footer />
       </div>
     );
@@ -28,7 +30,6 @@ const App: React.FC = () => {
     return (
       <>
         <Outlet />
-        <ButtonHelp/>
         <Footer />
       </>
     );
@@ -65,6 +66,10 @@ const App: React.FC = () => {
         {
           path: '/home/profile',
           element: <Profile/>
+        },
+        {
+          path: '/home/help',
+          element: <Help/>
         },
       ]
     },

@@ -1,9 +1,9 @@
 import React from 'react';
-import '../help-page/help-page.scss';
-import '../../app.css';
+import './help.scss';
 
 
-const HelpPage: React.FC = () => {
+const Help: React.FC = () => {
+  
   const handleButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const button = event.currentTarget;
     button.classList.toggle('active');
@@ -71,4 +71,4 @@ const HelpPage: React.FC = () => {
  );
 };
 
-export default HelpPage;
+export default Help;

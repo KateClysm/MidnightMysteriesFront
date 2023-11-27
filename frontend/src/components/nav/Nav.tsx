@@ -8,7 +8,8 @@ const Nav: React.FC = () => {
     const location = useLocation();
     const isProfileOrCharacters =
     location.pathname.includes('/home/profile') ||
-    location.pathname.includes('/home/characters');
+    location.pathname.includes('/home/characters') ||
+    location.pathname.includes('/home/help');
 
     const hasGameInProgress = true;
 
