@@ -1,12 +1,12 @@
 import React from "react";
-import '../button-help/button-help.css'
-import HelpPage from "../../pages/help-page/HelpPage";
+import '../button-help/button-help.scss'
+import { NavLink } from "react-router-dom";
 
 const ButtonHelp: React.FC = () => {
     return(
-        <button className="button-help">
-            ?<HelpPage/>
-        </button>
+        <div className="button-help-container">
+            <NavLink to="/home/help">Help</NavLink>
+        </div>
     );
 };
 

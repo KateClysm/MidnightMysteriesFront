@@ -9,6 +9,7 @@ import Register from './pages/register/Register';
 import Landing from './pages/landing/Landing';
 import Login from './pages/login/Login';
 import Profile from './pages/profile/profile';
+import ButtonHelp from './components/button-help/buttonHelp';
 
 const App: React.FC = () => {
 
@@ -17,6 +18,7 @@ const App: React.FC = () => {
       <>
         <Nav />
         <Outlet />
+        <ButtonHelp/>
         <Footer />
       </>
     );
@@ -26,6 +28,7 @@ const App: React.FC = () => {
     return (
       <>
         <Outlet />
+        <ButtonHelp/>
         <Footer />
       </>
     );
