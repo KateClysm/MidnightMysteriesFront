@@ -1,7 +1,6 @@
 import React from 'react';
 import '../help-page/help-page.scss';
 import '../../app.css';
-import ButtonHelp from '../../components/button-help/buttonHelp';
 
 
 const HelpPage: React.FC = () => {
@@ -68,9 +67,6 @@ const HelpPage: React.FC = () => {
           </ul>
         </div>
       </div>
-      {/* <>
-      <ButtonHelp />
-      </> */}
   </div>
  );
 };
