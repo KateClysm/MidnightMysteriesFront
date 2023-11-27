@@ -28,12 +28,12 @@
     background-attachment: fixed;
 }
 
-.container-app{
+/* .homepage-container{
     background-image: url(./assets/flashlight1.png);
     background-size: contain;
     width: 100%;
     background-repeat: no-repeat;
-}
+} */
 
   
 html, body {
@@ -55,17 +55,11 @@ h2 { font-size: 4rem; font-weight: lighter;}
 h3 { font-size: 3rem; }
 h4 { font-size: 1.9rem; }
 button, a { font-size: 1.5rem; }
-button, a, .footer-icon, .user-icon{
+button, a, .user-icon{
     cursor: pointer;
     color: var(--white-color);
     &:hover{
         transition: 0.3s;
-    }
-}
-a, .footer-icon, .user-icon{
-    color: var(--white-color);
-    &:hover{
-        color: var(--blood-color);
     }
 }
 button{

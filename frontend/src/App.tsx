@@ -13,14 +13,14 @@ import ButtonHelp from './components/button-help/buttonHelp';
 
 const App: React.FC = () => {
 
-  const LayoutLoggedIn = () => {
+  const LayoutHomepage = () => {
     return (
-      <>
+      <div className='homepage-container'>
         <Nav />
         <Outlet />
         <ButtonHelp/>
         <Footer />
-      </>
+      </div>
     );
   };
 
@@ -55,11 +55,11 @@ const App: React.FC = () => {
       ]
     },
     {
-      path: '/home/', 
-      element: <LayoutLoggedIn />,
+      path: '/home', 
+      element: <LayoutHomepage />,
       children: [
         {
-          path: '/home/',
+          path: '/home',
           element: <PrincipalPage/>
         },
         {
