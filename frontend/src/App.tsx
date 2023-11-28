@@ -17,14 +17,14 @@ const App: React.FC = () => {
 
   const LayoutHomepage = () => {
     return (
-      <div className='homepage-container'>
+      <>
         <Nav />
         <TestButton/>
         <div className="display-between">
           <Outlet />
           <Footer />
         </div>
-      </div>
+      </>
     );
   };
 

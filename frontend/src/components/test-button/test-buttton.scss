@@ -22,3 +22,10 @@
       border: 0.1rem solid var(--white-color);
     }
   }
+
+  @media only screen and (max-width:425px){
+    .test-button{
+      bottom: 18%;
+    }
+  }
+  
