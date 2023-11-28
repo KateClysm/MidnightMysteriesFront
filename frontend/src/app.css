@@ -64,10 +64,17 @@ input{
     font-size: 1.4rem;
 }
 
-  html {font-size: var(--font-size-small-mobile);}
-  @media (min-width: 425px) { html {font-size: var(--font-size-mobile);} }
-  @media (min-width: 600px) { html {font-size: var(--font-size-tablet);} }
-  @media (min-width: 1240px) { html {font-size: var(--font-size-laptop);} }
-  @media (min-width: 1400px) { html {font-size: var(--font-size-desktop);} }
-  @media (min-width: 1900px) { html {font-size: var(--font-size-large-desktop);} }
-  @media (min-width: 2500px) { html {font-size: var(--font-size-huge-desktop);} }
+.display-between{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+html {font-size: var(--font-size-small-mobile);}
+@media (min-width: 425px) { html {font-size: var(--font-size-mobile);} }
+@media (min-width: 600px) { html {font-size: var(--font-size-tablet);} }
+@media (min-width: 1240px) { html {font-size: var(--font-size-laptop);} }
+@media (min-width: 1400px) { html {font-size: var(--font-size-desktop);} }
+@media (min-width: 1900px) { html {font-size: var(--font-size-large-desktop);} }
+@media (min-width: 2500px) { html {font-size: var(--font-size-huge-desktop);} }

@@ -19,9 +19,11 @@ const App: React.FC = () => {
     return (
       <div className='homepage-container'>
         <Nav />
-        <Outlet />
         <TestButton/>
-        <Footer />
+        <div className="display-between">
+          <Outlet />
+          <Footer />
+        </div>
       </div>
     );
   };

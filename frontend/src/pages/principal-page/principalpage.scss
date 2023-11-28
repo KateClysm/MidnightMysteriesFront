@@ -5,21 +5,24 @@
     align-items: center;
     color: var(--white-color);
     text-align: center;
-    // margin-top: 30%;
     padding-bottom: 2rem;
 
+    // .flashlight-container{
+    //     background-image: url(../../assets/flashlight1.png);
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //     width: 100%;
+    //     height: 100%;
+    //    background-position: top;
+       
+    // }
+
     .flashlight-container{
-        background-image: url(../../assets/flashlight1.png);
-        background-size: contain;
-        background-repeat: no-repeat;
         width: 100%;
-        height: 100%;
-       background-position: top;
-       
-       
-       position: absolute; // Cambia 'fixed' a 'absolute'
-        top: -3.5rem;
-        // z-index: 100;
+        .flashlight{
+            width: 100%;
+            height: auto;
+        }
     }
 
     h1{
@@ -27,7 +30,7 @@
     }
 
     .container-game{
-        margin-top: 80vh;
+        // margin-top: 80vh;
         background-color: var(--transparent-black-color);
         width: 85%;
         height: 30rem;
