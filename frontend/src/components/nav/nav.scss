@@ -36,12 +36,16 @@
     }
 }
 
-.white-nav{
-    a, button, .user-icon{ 
-        color: var(--white-color); 
 
-        &:hover{ 
-            color: var(--blood-color); 
-        } 
+.white-nav{
+    .container-nav{
+        a, button, .user-icon{ 
+            color: var(--white-color); 
+    
+            &:hover{ 
+                color: var(--blood-color); 
+            } 
+        }
     }
+   
 }
