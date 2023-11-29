@@ -6,7 +6,7 @@ const Synopsis: React.FC = () => {
     
     return (
         <div className='container-synopsis'>
-            <h1 className='title'>Midnight Mysteries</h1>
+            <h1 className='title'>MIDNIGHT MYSTERIES</h1>
             <div className='synopsis'>
                 <p>In the peaceful town of Shadowvale, where most people know each other, a sinister rumor about a murdererhas begun to spread 
                 around when people started to dissappear and corpses started to be found.</p>

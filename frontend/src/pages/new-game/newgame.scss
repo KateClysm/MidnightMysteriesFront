@@ -24,7 +24,7 @@
     
     .art {
         background-image: url(../../assets/provitional-ilustration.png); 
-        height: 80vh;
+        height: 90vh;
         width: 60vw; 
         background-size: cover;  
         background-position: top;
@@ -137,7 +137,7 @@
 
     .character {
         width: 20vw;
-        height: 50vh;
+        height: 60vh;
         border: 1px solid var(--white-color);
         cursor: pointer;
         margin-right: 2em;
@@ -147,14 +147,15 @@
             margin-bottom: 1em;
             width: 70vw;
             height: 50vh;
+            transform: none;
             &:hover {
-                animation: none;
+                pointer-events: none;
             }
         }
         
         &:hover {
             border: 1px solid var(--blood-color);
-            animation: upanddown linear 2s, 2s alternate;
+            animation: upanddown 1s alternate 2;
         }
 
         
@@ -186,7 +187,7 @@
         color: var(--blood-color);
         cursor: pointer;
     }
-    
+
     img {
         width: 20vw;
         height: 60vh;
@@ -242,7 +243,7 @@
             text-align: center;
             font-size: 2em;
             &:hover {
-                animation: 10s upanddown ease-in-out alternate;
+                animation: 10s upanddown alternate 4;
             }
         }
 
