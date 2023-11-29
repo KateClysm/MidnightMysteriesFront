@@ -22,7 +22,7 @@ const SelectedCharacter:React.FC<charProps> = ({imgUrl, selected, select}: charP
                 <input type="text" placeholder='Enter your character name' className='charname' size={35} onChange={(e) => setValue(e.target.value)}/>
                 <button type="submit" className='submit'>Confirm</button>
             </form>
-            <h3 className={`${submitted ? 'visible' : ''}`}>Hi <span>{value}</span> are you ready?</h3>
+            <h3 className={`${submitted ? 'visible' : ''}`}>Hi <span onClick={() => submit(!submitted)}>{value}</span> are you ready?</h3>
             <img src={`${imgUrl}`} alt="selected-character"/>
             <div className='button-menu'>
                 <button className='newgame-button' onClick={() => select(!selected)}>Back</button>
