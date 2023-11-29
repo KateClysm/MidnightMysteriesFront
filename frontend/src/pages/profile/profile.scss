@@ -7,7 +7,7 @@
     justify-content: center;
     width: 100%;
     padding: 70px 50px;
-    height: auto;
+    height: 100%;
 
     main {
         width: 100%;
@@ -23,7 +23,7 @@
             align-items: center;
         }
 
-        .container_img {
+        .container_img_character {
             background-color: white;
             height: 76vh;
             width: 60%;
@@ -36,7 +36,7 @@
             }
         }
 
-        .container_cards {
+        .profile_container_cards {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -46,14 +46,15 @@
             padding: 30px 0px;
             
 
-            @media screen and (min-width: 600px) {
+            @media screen and (min-width: 600px){
                 width: 40%;
                 padding: 0px;
                 height: 75vh;
             }
             
 
-            .card {
+            
+            .card_style {
                 width: 80%;
                 height: auto;
                 border: 2px solid white;
