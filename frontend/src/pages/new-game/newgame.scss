@@ -6,6 +6,7 @@
 
 }
 
+
 .container-main {
     width: 100vw;
     height: 90vh;
@@ -31,8 +32,11 @@
         border: 1px solid var(--white-color);
         border-radius: 1%;
         @media screen and (max-width: 800px){
-            height: 40%;
-            width: 90%;
+            height: 50vh;
+            width: 90vw;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
     }
 
@@ -47,7 +51,8 @@
     text-align: center;
     padding-top: 1em;
     @media screen and (max-width: 800px) {
-        margin-top: 2em;
+        margin-top: 1em;
+        padding: 0;
     }
 }
 
@@ -69,10 +74,13 @@
     }
 }
 .synopsis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
-    width: 60vw;
+    width: 80vw;
     margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 1%;
     p {
         padding: 0.5em;
@@ -81,6 +89,20 @@
 
     @media screen and (max-width: 800px) {
         margin-top: 2em;
+        height: 60vh;
+        font-size: 3em;
+        line-height: 1.6;
+    }
+}
+
+@keyframes upanddown {
+    0% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
     }
 }
 
@@ -102,23 +124,40 @@
     display: flex;
     justify-items: center;
     justify-content: center;
-    
-    img {
+    @media screen and (max-width: 700px) {
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px solid var(--white-color);
+        overflow: scroll;
+        margin-top: 2em;
+    }
+
+    .character {
         width: 20vw;
-        height: 60vh;
+        height: 50vh;
         border: 1px solid var(--white-color);
         cursor: pointer;
-        margin-right: 1em;
-        border: 1px solid var(--white-color);
-        
+        margin-right: 2em;
+        z-index: 2;
         @media screen and (max-width: 700px) {
-            width: 5vw;
-            height: 40vh;
+            margin-right: 0;
+            margin-bottom: 1em;
+            width: 70vw;
+            height: 50vh;
+            &:hover {
+                animation: none;
+            }
         }
         
         &:hover {
             border: 1px solid var(--blood-color);
+            animation: upanddown linear 2s, 2s alternate;
         }
+
+        
     }
    
 }
@@ -131,57 +170,82 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    @media screen and (max-width: 1000px) {
+    align-items: center;
+    @media screen and (max-width: 700px) {
         height: 85vh;
     }
-    .character{
+    
+    h3 {
+        display: none;
+        color: var(--white-color);
+        font-weight: 300;
+    }
+
+    span {
+        font-family: 'Bigelow Rules';
+        color: var(--blood-color);
+    }
+    img {
         width: 20vw;
         height: 60vh;
-        border: 1px solid var(--white-color);
-        margin: 0 auto;
+        border: 1px solid var(--blood-color);
+        margin-bottom: 1em;
         @media screen and (max-width: 700px) {
-            width: 40vw;
-            height: 40vh;
-        }
-        @media screen and (min-width: 701px) and (max-width: 1000px) {
-            width: 50vw;
+            width: 70vw;
+            height: 60vh;
         }
     }
 
     form {
         margin: 1em auto;
-        font-size: 2em;
-        input {
+        
+
+        
+
+        .charname {
             display: block;
             background-color: transparent;
             border: none;
-            font-size: 2em;
+            font-size: 3em;
+            font-family: 'Bigelow Rules';
             text-align: center;
-        }
-
-        .submit {
-            margin: 0 auto;
-            color: var(--white-color);
-        }
-
-        .button-menu{
-            text-align: center;
-            padding-right: 2em;
-            margin: 0 auto;
-            .newgame-button {
-                margin: 0;
-            }
-        }
-
-        .charname {
+            cursor: pointer;
             color: var(--blood-color);
             
             ::ms-input-placeholder {
                color: var(--blood-color);
+               
+            }
+            
+            &::placeholder {
+                font-family: 'Amatic SC';
+            }
+            &:focus::-webkit-input-placeholder {
+                transition: opacity 0.3s 0.5s ease-in !important;
+                opacity: 0.35;
+            }
+
+            &:active, &:focus {
+                outline: none;
+            }
+
+        }
+
+        .submit {
+            margin: 0 auto; 
+            display: block;
+            color: var(--white-color);
+            cursor: pointer;
+            padding-top: 10px;
+            text-align: center;
+            font-size: 2em;
+            &:hover {
+                animation: 10s upanddown ease-in-out alternate;
             }
         }
+
     };
-    
+
     .button-menu{
         text-align: center;
         padding-right: 2em;
@@ -192,4 +256,13 @@
             padding-left: 2em;
         }
     }
+    
+    .hidden {
+        display: none;
+    }
+
+    .visible {
+        display: block;
+    }
+
 }

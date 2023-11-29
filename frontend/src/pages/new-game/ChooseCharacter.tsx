@@ -14,13 +14,13 @@ const ChooseCharacter: React.FC = () => {
         <div className={`container-character ${selected ? 'disabled' : ''}`}>
             <h3>Choose your character skin</h3>
             <div className='character-options'>
-                <img src={character1} alt="character-1" onClick={() => change(character1)}/>
-                <img src={character2} alt="character-2" onClick={() => change(character2)}/>
-                <img src={character3} alt="character-3" onClick={() => change(character3)}/>
+                <img src={character1} alt="character-1" onClick={() => change(character1)} className='character'/>
+                <img src={character2} alt="character-2" onClick={() => change(character2)} className='character'/>
+                <img src={character3} alt="character-3" onClick={() => change(character3)} className='character'/>
             </div>
             <button className='newgame-button' onClick={() => select(!selected)}>Next</button>
         </div>
-        {selected ? <SelectedCharacter imgUrl={img}/> : null}
+        {selected ? <SelectedCharacter imgUrl={img} selected={selected} select={select}/> : null}
         </>
     )
 }

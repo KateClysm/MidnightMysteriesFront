@@ -1,24 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { NavLink } from 'react-router-dom';
 
 
 interface charProps {
-    imgUrl: any
+    imgUrl: any,
+    select: any,
+    selected: any
 }
 
-const SelectedCharacter:React.FC<charProps> = ({imgUrl}: charProps) =>  {
+const SelectedCharacter:React.FC<charProps> = ({imgUrl, selected, select}: charProps) =>  {
     
-    
+    const [value, setValue] = useState("");
+    const [submitted, submit] = useState(false);
+
     return (
         <div className='selected-character'>
-            <form action="">
-                <input type="text" placeholder='Your character name' className='charname'/>
-                <input type="submit" value="confirm" className='submit'/>
+            <form action="" onSubmit={e => {
+                e.preventDefault();
+                submit(!submitted);
+            }} className={ `${submitted ? 'hidden' : ''}`}>
+                <input type="text" placeholder='Enter your character name' className='charname' size={35} onChange={(e) => setValue(e.target.value)}/>
+                <button type="submit" className='submit'>Confirm</button>
             </form>
-            <h3>Hi <span></span> are you ready?</h3>
-            <img src={`${imgUrl}`} alt="selected-character" className='character'/>
+            <h3 className={`${submitted ? 'visible' : ''}`}>Hi <span>{value}</span> are you ready?</h3>
+            <img src={`${imgUrl}`} alt="selected-character"/>
             <div className='button-menu'>
-                <button className='newgame-button'>Back</button>
-                <button className='newgame-button'>Next</button>
+                <button className='newgame-button' onClick={() => select(!selected)}>Back</button>
+                <NavLink className='newgame-button' to='/'>Next</NavLink>
             </div>
         </div>
     )
