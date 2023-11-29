@@ -25,7 +25,7 @@
                 border-bottom: 10px;
                 
                 .user-bar {
-                    color: var(--white-color);
+                    color: var(--black-color);
                 }
 
                 .dropdown {
@@ -44,7 +44,7 @@
                     margin-top: 15px;
                     border-radius: 2px;
                     right: 30px;
-                    background-color: rgb(44, 44, 44);
+                    background-color: rgba(161, 161, 161, 0.484);
 
                     &.show {
                         max-height: 400px;
@@ -53,7 +53,7 @@
                     .user-name{
                         padding: 15px 10px;
                         font-weight: 500;
-                        border-bottom: 0.5px solid rgba(96, 96, 96, 0.534);
+                        border-bottom: 0.5px solid rgba(53, 53, 53, 0.175);
                         letter-spacing: 0.05rem;
 
                         span{
@@ -65,7 +65,7 @@
                     }
 
                     li {
-                        color: var(--white-color);
+                        color: var(--black-color);
                         &:hover:first-child{ 
                             background-color: transparent;
                         }
@@ -121,6 +121,30 @@
 
 .white-nav{
     .container-nav{
+        .container-right{
+            .dropdown-container{
+                .user-bar{ 
+                    color: var(--white-color);
+                }
+                ul {
+                    background-color: rgb(44, 44, 44);
+                    
+                    .user-name{
+                        border-bottom: 0.5px solid rgba(96, 96, 96, 0.534);
+                        span{
+                            color: var(--blood-color);
+                        }
+                    }
+
+                    li {
+                        color: var(--white-color);
+                    }
+                }
+
+                
+            }
+        }
+
         a, button, .user-icon{ 
             color: var(--white-color); 
     
@@ -128,6 +152,8 @@
                 color: var(--blood-color); 
             } 
         }
+
+        
     }
    
 }
