@@ -1,6 +1,7 @@
 .container-nav-absolute{
     position: absolute;
     width: 100%;
+
     .container-nav{
         display: flex;
         justify-content: space-between;
@@ -8,11 +9,91 @@
         padding: 1rem 2rem;
         height: 3.5rem;
         
-        .container-left, .container-right{
+        .container-left{
             display: flex;
             align-items: center;
             gap: 2rem;
         }
+
+        .container-right{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .dropdown-container{
+                padding: 0.1rem;
+                border-bottom: 10px;
+                
+                .user-bar {
+                    color: var(--white-color);
+                }
+
+                .dropdown {
+                    max-width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+                ul{
+                    position: absolute;
+                    max-height: 0px;
+                    overflow: hidden;
+                    transition: max-height 1s;
+                    list-style-type: none;
+                    margin-top: 15px;
+                    border-radius: 2px;
+                    right: 30px;
+                    background-color: rgb(44, 44, 44);
+
+                    &.show {
+                        max-height: 400px;
+                    }
+
+                    .user-name{
+                        padding: 15px 10px;
+                        font-weight: 500;
+                        border-bottom: 0.5px solid rgba(96, 96, 96, 0.534);
+                        letter-spacing: 0.05rem;
+
+                        span{
+                            color: var(--blood-color);
+                            font-weight: 900;
+                            letter-spacing: 0.1rem; 
+                        }
+                    
+                    }
+
+                    li {
+                        color: var(--white-color);
+                        &:hover:first-child{ 
+                            background-color: transparent;
+                        }
+
+                        &:hover{ 
+                            background-color: rgba(0, 0, 0, 0.21); 
+                        }
+                    }
+
+                    .opc-bar{
+                        display: block;
+                        font-size: 1rem;
+                        padding: 5px 10px;
+                        font-weight: 500;
+                    }
+
+                     
+                }
+
+                
+                &:hover ul {
+                    max-height: 400px;
+                }
+
+                
+            }
+        }
+
         .user-icon-container{
             font-size: 1.9rem;
             display: flex;
@@ -32,6 +113,7 @@
             } 
         }
     
+
         
     }
 }
