@@ -20,7 +20,7 @@ const SelectedCharacter:React.FC<charProps> = ({imgUrl, selected, select}: charP
                 e.preventDefault();
                 submit(!submitted);
             }} className={ `${submitted ? 'hidden' : ''}`}>
-                <input type="text" placeholder='Enter your character name' className='charname' size={40} onChange={(e) => setValue(e.target.value)}/>
+                <input type="text" placeholder='Enter your character name' className='charname' size={40} onChange={(e) => setValue(e.target.value)} required/>
                 <button type="submit" className='submit'>Confirm</button>
             </form>
             <h4 className={`${submitted ? 'visible' : ''}`}>Hi <span onClick={() => submit(!submitted)}>{value}</span>, are you ready?</h4>
