@@ -1,0 +1,35 @@
+.container-synopsis {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 3em;
+    padding-bottom: 1em;
+    @media screen and (max-width: 800px) {
+        width: 100vw;
+        padding-top: 5em;
+    }
+}
+.synopsis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 80vw;
+    height: fit-content;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 1%;
+    p {
+        padding: 0.5em;
+        color: var(--white-color);
+        justify-self: center;
+    }
+
+    @media screen and (max-width: 700px) {
+        margin-top: 20px;
+        height: 60vh;
+        font-size: 3em;
+        line-height: 1.6;
+    }
+}

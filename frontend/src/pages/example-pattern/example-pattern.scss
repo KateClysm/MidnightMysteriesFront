@@ -1,0 +1,25 @@
+.container-example-pattern{
+    background-image: url(../../assets/steps.png);
+    background-size: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .box{
+        width: 70vw;
+        height: 70vh;
+        // background-color: var(--white-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5rem;
+
+        h1{
+            // color: var(--black-color);
+            color: var(--white-color);
+        }
+    }
+}
+

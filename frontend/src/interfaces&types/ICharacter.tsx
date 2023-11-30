@@ -1,10 +1,12 @@
 export interface ICharacter {
+    id: string;
     image: string;
+    phrase: string;
     name: string;
     sanity: string;
     state: boolean;
     age: number | null;
-    relatives: string;
+    ending: string;
 }
 
 export interface IUserCharacter extends ICharacter {
