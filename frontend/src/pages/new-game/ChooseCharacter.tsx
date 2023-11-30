@@ -1,5 +1,7 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './newgame.scss';
+import './choose-character.scss';
 import character1 from '../../assets/character-1.png';
 import character2 from '../../assets/character-2.png';
 import character3 from '../../assets/character-3.png';
@@ -18,7 +20,10 @@ const ChooseCharacter: React.FC = () => {
                 <img src={character2} alt="character-2" onClick={() => change(character2)} className='character'/>
                 <img src={character3} alt="character-3" onClick={() => change(character3)} className='character'/>
             </div>
-            <button className='newgame-button' onClick={() => select(!selected)}>Next</button>
+            <div className='button-menu'>
+                <NavLink to='/newgame' className='newgame-button'>BACK</NavLink>
+                <button className='newgame-button' onClick={() => select(!selected)}>NEXT</button>
+            </div>
         </div>
         {selected ? <SelectedCharacter imgUrl={img} selected={selected} select={select}/> : null}
         </>

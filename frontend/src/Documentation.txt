@@ -1,0 +1,256 @@
+Temas:
+
+-¿Qué es un Componente Funcional?
+-Hook useState
+-¿Qué es una función Asíncrona?
+-Auth Context
+
+
+COMPONENTE FUNCIONAL:
+
+Un componente funcional en React es una forma de definir un componente utilizando una función en lugar de una clase. Desde la introducción de React Hooks en versiones posteriores de React, los componentes funcionales han ganado popularidad debido a la simplicidad y la capacidad de usar Hooks para manejar el estado y el ciclo de vida de los componentes.
+
+Antes de la introducción de Hooks, los componentes funcionales carecían de estado y de métodos de ciclo de vida, lo que los limitaba principalmente a representar componentes que no requerían estado interno o lógica compleja. Sin embargo, con la llegada de los Hooks, los componentes funcionales ahora pueden tener su propio estado interno, realizar efectos secundarios y utilizar el contexto de React, lo que los hace mucho más poderosos y versátiles.
+
+
+HOOK USESTATE:
+
+El hook useState es una función proporcionada por React que permite a los componentes funcionales tener estado local. Este hook se utiliza para declarar una variable de estado dentro de un componente funcional en React.
+
+Cuando utilizas useState, estás declarando una variable que se comporta como un estado dentro del componente funcional. Al llamar a useState, obtienes un array que contiene dos elementos:
+El primer elemento es la variable de estado misma.
+El segundo elemento es una función que se usa para actualizar ese estado.
+const [count, setCount] = useState(0);
+En este caso, count es la variable de estado que almacena un valor numérico (inicializado en 0), y setCount es la función que se utiliza para actualizar el valor de count.
+
+La función useState de React devuelve una matriz (array) que consiste en dos elementos. Estos elementos pueden ser desestructurados para acceder al estado y a la función que lo actualiza.
+
+Por lo tanto, es correcto considerar useState como un mecanismo que devuelve un array de dos elementos y utilizar la desestructuración para acceder a cada uno de ellos (el estado y su función de actualización) para trabajar con el estado en un componente funcional de React.
+
+
+FUNCIÓN ASÍNCRONA
+
+En el contexto de JavaScript, las operaciones asíncronas son aquellas que pueden tomar tiempo para completarse, como las solicitudes a servidores, la lectura o escritura de archivos, entre otras, y que no bloquean la ejecución del código.
+
+Antes de que las funciones asíncronas estuvieran disponibles en JavaScript, se utilizaban callbacks y Promesas para manejar operaciones asíncronas, lo que podía resultar en código anidado complicado y difícil de mantener, conocido como "callback hell" o "el infierno de los callbacks".
+
+Las funciones asíncronas resuelven este problema proporcionando una sintaxis más clara y estructurada para manejar código asíncrono. Para definir una función asíncrona, se utiliza la palabra clave async. Por ejemplo:
+
+async function myAsyncFunction() {
+  // Código aquí
+}
+
+Al declarar una función como async, se permite el uso de la palabra clave await dentro de esa función. await se usa para esperar la finalización de una operación asíncrona y pausar la ejecución del código hasta que esa operación se complete y se resuelva.
+
+Por ejemplo, en una función asíncrona que realiza una solicitud HTTP utilizando axios:
+
+async function fetchData() {
+  try {
+    const response = await axios.get('https://api.example.com/data');
+    console.log(response.data);
+    // Más código aquí después de recibir la respuesta
+  } catch (error) {
+    console.error('Error al obtener datos:', error);
+  }
+}
+
+En este caso, await detiene la ejecución de la función hasta que la solicitud HTTP se complete y se obtenga la respuesta del servidor. Una vez que la promesa devuelta por axios.get se resuelve, la ejecución continúa con la respuesta disponible en la variable response.
+
+En resumen, una función asíncrona en JavaScript marcada con la palabra clave async permite escribir código más legible y estructurado para manejar operaciones asíncronas mediante el uso de await para esperar la finalización de dichas operaciones.
+
+
+AUTH CONTEXT:
+
+interface AuthContextType {
+  currentUser: TUser | null;
+  login: (inputs: LoginInputs) => Promise<void>;
+  logout: () => Promise<void>;
+  updateCurrentUser: (user: TUser) => void;
+}
+
+
+El uso de void en las definiciones de las funciones dentro de la interfaz AuthContextType especifica el tipo de retorno que se espera de cada función. En TypeScript, void se utiliza para indicar que una función no devuelve ningún valor.
+
+login es una función que toma un parámetro de tipo LoginInputs.
+Esta función retorna una promesa que eventualmente se resolverá a un valor de tipo void, lo que indica que no se espera que retorne ningún dato específico, pero se espera que la promesa se resuelva sin ningún valor adicional.
+
+logout es una función que no toma ningún parámetro.
+Esta función retorna una promesa que eventualmente se resolverá a un valor de tipo void, lo que significa que, al igual que en el caso anterior, no se espera que retorne ningún valor, pero se espera que la promesa se resuelva sin ningún valor adicional.
+
+updateCurrentUser es una función que toma un parámetro de tipo TUser.
+Esta función no retorna ningún valor (void). En este contexto, se utiliza para indicar que la función realiza ciertas operaciones o actualizaciones, pero no devuelve ningún dato específico como resultado.
+
+En resumen, el uso de void en estas definiciones de funciones dentro de la interfaz AuthContextType sirve para especificar explícitamente que estas funciones no devuelven ningún valor en particular, ya sea porque son funciones que realizan tareas sin necesidad de retorno o porque retornan promesas que se resuelven sin datos específicos. Esto ayuda a mejorar la claridad y comprensión del código, indicando el comportamiento esperado de estas funciones.
+
+const initialContextValue: AuthContextType = {
+  currentUser: null,
+  login: async () => {},
+  logout: async () => {},
+  updateCurrentUser: () => {}
+};
+
+La razón principal para establecer este initialContextValue es proporcionar una estructura predeterminada y evitar errores en caso de que el contexto se use antes de que se asignen los valores reales. Además, cuando se utiliza un proveedor de contexto en React, este valor inicial se pasa al contexto hasta que se reemplace por un valor actualizado cuando se inicialice el contexto en la aplicación.
+
+En resumen, proporcionar este valor inicial para el contexto de autenticación ayuda a definir la estructura esperada del contexto y evita errores relacionados con propiedades indefinidas o nulas al usar el contexto en componentes de React antes de que se establezcan los valores reales.
+
+export const AuthContext = createContext(initialContextValue);
+
+createContext es una función proporcionada por React que crea un nuevo contexto. En este caso, se está creando un contexto llamado AuthContext. Este contexto será utilizado para pasar y compartir los datos de autenticación (currentUser, login, logout, etc.) a través de la jerarquía de componentes de React, permitiendo que los componentes accedan a estos datos sin tener que pasar props manualmente a través de múltiples niveles de componentes.
+
+
+export const AuthContextProvider = ({ children }: { children: ReactNode }) => {}
+
+AuthContextProvider es un componente funcional que actúa como un proveedor de contexto. Este componente se utiliza para envolver otros componentes de la aplicación y proporcionarles acceso al contexto de autenticación a través del AuthContext que se ha creado. Toma un prop children (representado como un ReactNode) que son los componentes hijos a los que se les proporcionará acceso al contexto de autenticación.
+
+Dentro de AuthContextProvider, se utiliza AuthContext.Provider para envolver los componentes hijos ({children}) con el contexto creado. Esto asegura que todos los componentes descendientes que consumen el contexto (mediante el uso de useContext(AuthContext)) tengan acceso a los valores de autenticación proporcionados por el contexto.
+
+En resumen, AuthContext se crea como un contexto para almacenar los datos de autenticación y AuthContextProvider se utiliza para proporcionar esos datos a los componentes hijos de la aplicación que necesitan acceder a ellos. Estos son componentes esenciales en la implementación de la gestión de estados globales como el contexto en aplicaciones de React.
+
+
+
+const [currentUser, setCurrentUser] = useState<TUser | null>(
+    typeof storedUser === "string" ? JSON.parse(storedUser) : null
+);
+
+Utiliza un estado de React (hook useState) para almacenar y actualizar al usuario actual.
+
+Se puede interpretar de la siguiente manera:
+
+const [usuario actual, actualizar el usuario] = useState < esta constante puede ser nula o cumplir con el Tipo TUser > (
+    si el tipo del usuario actual es un string, se utiliza JSON.parse(usuario actual) para convertir el string JSON almacenado en usuario actual a un objeto JavaScript correspondiente (asumiendo que usuario actual contiene un objeto JSON válido) y luego utilizarlo como el valor inicial del usuario actual, caso contrario se almacena de manera predeterminada null.
+);
+
+const login = async ( inputs:LoginInputs ) => {
+  const res = await axios.post("http://localhost:8800/midnightmysteries/auth/login", inputs, {
+    withCredentials: true,
+  });
+  setCurrentUser(res.data);
+};
+
+¿Por qué se utiliza POST en la petición de arriba?
+
+El uso del método POST en una solicitud HTTP para acceder al inicio de sesión generalmente se debe a razones de seguridad y convenciones de diseño de API.
+
+El método POST se utiliza comúnmente en aplicaciones web para enviar datos confidenciales, como credenciales de inicio de sesión (como nombre de usuario y contraseña), a un servidor para su autenticación. Esto es una práctica común porque el método POST envía datos en el cuerpo de la solicitud HTTP, lo que los hace menos visibles que cuando se envían a través del método GET (donde los datos se envían como parte de la URL).
+
+El inicio de sesión es una acción que generalmente requiere enviar información confidencial y sensible al servidor para autenticar al usuario. Por lo tanto, utilizar el método POST proporciona una capa adicional de seguridad ya que los datos se envían en el cuerpo de la solicitud, lo que no los hace visibles directamente en la URL ni en los registros del servidor.
+
+La función login utiliza axios.post para realizar una solicitud HTTP POST al endpoint "http://localhost:8800/midnightmysteries/auth/login" enviando los datos proporcionados en inputs. Estos datos probablemente incluyen el nombre de usuario y la contraseña del usuario que está intentando iniciar sesión.
+
+Además, es común utilizar el método POST para solicitudes de inicio de sesión en el diseño de API RESTful, ya que siguen el principio de que las operaciones de cambio de estado o de datos confidenciales deben realizarse a través de métodos POST o PUT en lugar de métodos GET, que se utilizan para operaciones de lectura que no cambian el estado del servidor.
+
+En resumen, el uso del método POST para el inicio de sesión es una práctica recomendada debido a su capacidad para enviar datos confidenciales de manera segura y convenciones de diseño de API.
+
+La opción withCredentials: true en una solicitud HTTP indica que se deben enviar cookies y credenciales (como cookies de sesión, tokens de autenticación u otros datos de autorización) en la solicitud. Esto es fundamental cuando se trabaja con autenticación basada en cookies o en cualquier sistema que requiera información de credenciales para autorizar y autenticar las solicitudes al servidor.
+
+Cuando se establece withCredentials: true, la solicitud se realiza con las credenciales del usuario, lo que significa que las cookies y los encabezados de autorización se incluirán en la solicitud. Esto permite al servidor reconocer y autenticar al usuario correctamente.
+
+Es importante mencionar que, al utilizar withCredentials: true, hay consideraciones de seguridad a tener en cuenta. Los servidores deben configurarse adecuadamente para permitir el intercambio de cookies entre dominios (Cross-Origin Resource Sharing - CORS) si la solicitud proviene de un dominio diferente al del servidor para evitar problemas de seguridad relacionados con CORS.
+
+  const logout = async () => {
+    await axios.post("http://localhost:8800/apiForum/auth/logout");
+    setCurrentUser(null); 
+  };
+
+Se utiliza axios.post para realizar una solicitud HTTP POST al endpoint "http://localhost:8800/apiForum/auth/logout".
+Esta solicitud está diseñada para notificar al servidor que el usuario está cerrando sesión. Dependiendo de la implementación del backend, esta solicitud puede estar destinada a realizar tareas específicas relacionadas con el cierre de sesión, como invalidar la sesión actual del usuario en el servidor.
+
+  const updateCurrentUser = (user: TUser) => {
+    if (currentUser) {
+      const updatedUser: TUser = {
+        ...currentUser, 
+        username: user.username,
+        id: user.id,
+        email: user.email,
+        age: user.age,
+        unlocked_characters: user.unlocked_characters,
+        unlocked_endings: user.unlocked_endings,
+        unlocked_objects: user.unlocked_objects,
+        times_played: user.times_played,
+        member_since: user.member_since
+      };
+      setCurrentUser(updatedUser);
+    }
+  };
+
+if (currentUser) { ... }: Se verifica si existe un currentUser. Esto se hace para asegurarse de que haya un usuario actual antes de intentar actualizar sus detalles. Si currentUser es null o undefined, la actualización no se realiza.
+
+{ ...currentUser, ... }: Se utiliza la sintaxis de propagación (...) para crear una copia del usuario actual (currentUser). Se están sobrescribiendo los campos del usuario con los valores proporcionados en el parámetro user.
+
+setCurrentUser(updatedUser);: Después de crear la copia actualizada del usuario (updatedUser) con los nuevos detalles, se utiliza la función setCurrentUser para actualizar el estado del usuario actual en la aplicación con los detalles actualizados.
+
+En resumen, la función updateCurrentUser toma un objeto user de tipo TUser que contiene nuevos detalles del usuario. Luego, verifica si existe un usuario actual (currentUser) y, en caso afirmativo, crea una copia actualizada de ese usuario con los nuevos detalles proporcionados y actualiza el estado del usuario actual en la aplicación con esos nuevos detalles. Esta función ayuda a mantener actualizada la información del usuario en la interfaz de la aplicación cuando se modifican sus detalles.
+
+¿Por qué  se hace una copia de currentUser y luego se vuelven a modificar todos los campos con user?
+
+es una técnica comúnmente utilizada para actualizar los campos de un objeto (currentUser) en JavaScript o TypeScript al crear una copia del objeto existente y luego sobrescribir algunos o todos sus campos con nuevos valores provenientes de otro objeto (user).
+
+La razón principal para realizar una copia de currentUser y luego modificar sus campos con los valores de user es garantizar la inmutabilidad de los datos. En JavaScript y TypeScript, los objetos se pasan por referencia, lo que significa que si simplemente asignas currentUser a updatedUser y luego modificas updatedUser, también modificarás currentUser porque ambos apuntan al mismo objeto en la memoria.
+
+Al utilizar la sintaxis de propagación (...), se crea una copia superficial (shallow copy) de currentUser, lo que significa que se copian todas las propiedades de currentUser en un nuevo objeto updatedUser. Luego, al proporcionar propiedades adicionales o sobrescribir algunas existentes con los valores de user, se garantiza que currentUser no se modifique directamente. Esto es crucial, especialmente si se trabaja con datos sensibles o si se necesita mantener el estado anterior para realizar comparaciones o deshacer cambios.
+
+La copia y actualización de campos individuales se realizan para preservar otros datos presentes en currentUser que no se proporcionan en user. De esta manera, se conservan los valores existentes de currentUser que no se actualizan con la información de user.
+
+En resumen, esta técnica se utiliza para mantener la inmutabilidad de los datos al actualizar un objeto, asegurando que el objeto original (currentUser) no se modifique directamente y manteniendo la integridad de otros campos en el objeto actualizado (updatedUser).
+
+ useEffect(() => {
+    if (currentUser !== null) {
+      localStorage.setItem("user", JSON.stringify(currentUser));
+    }
+  }, [currentUser]);
+
+useEffect se utiliza para ejecutar efectos secundarios en componentes funcionales, y se ejecuta después de que se renderiza el componente o después de que ciertos valores cambian en la dependencia especificada.
+
+Se está utilizando useEffect para observar cambios en la variable de estado currentUser. Cuando el valor de currentUser cambia, el efecto se dispara.
+
+El efecto en sí realiza lo siguiente:
+
+Verifica si currentUser no es null. Esto es importante para evitar almacenar null en el almacenamiento local del navegador.
+Si currentUser no es null, utiliza localStorage.setItem para almacenar el objeto currentUser como una cadena JSON en el almacenamiento local del navegador bajo la clave "user".
+
+En resumen, este efecto se asegura de que, cada vez que currentUser cambie y no sea null, su valor se almacene en el almacenamiento local del navegador. Esto se realiza para persistir los datos del usuario entre las sesiones y mantener su estado de autenticación incluso después de recargar la página o cerrar y abrir el navegador nuevamente.
+
+  const contextValue: AuthContextType = {
+    currentUser,
+    login,
+    logout,
+    updateCurrentUser
+  };
+
+Se crea un objeto contextValue que contiene las siguientes propiedades:
+currentUser: Contiene la información del usuario actual.
+login: Es una función que se utiliza para realizar el inicio de sesión del usuario.
+logout: Es una función que se utiliza para cerrar la sesión del usuario.
+updateCurrentUser: Es una función que se utiliza para actualizar los detalles del usuario actual.
+
+Estas propiedades representan los valores y las funciones que serán proporcionados a través del contexto para que los componentes hijos puedan acceder a ellos.
+
+ return (
+    <AuthContext.Provider value={contextValue}>
+      {children}
+    </AuthContext.Provider>
+  );
+
+<AuthContext.Provider value={contextValue}>: Utiliza el componente Provider del contexto de autenticación AuthContext. Este componente es proporcionado por la API de Contexto de React y se utiliza para envolver los componentes secundarios (children) y compartir valores específicos a través del contexto.
+value={contextValue}: Proporciona el objeto contextValue como valor del contexto a los componentes hijos que estén suscritos a este contexto. Esto permite que los componentes descendientes accedan a las propiedades (currentUser, login, logout, updateCurrentUser) que se definieron en contextValue.
+
+En resumen, este código establece un contexto de autenticación (AuthContext) que proporciona ciertos valores y funciones (currentUser, login, logout, updateCurrentUser) a sus componentes hijos utilizando la API de Contexto de React. Los componentes secundarios envueltos por este proveedor de contexto (AuthContext.Provider) tendrán acceso a estos valores y funciones a través del contexto, lo que les permite realizar acciones relacionadas con la autenticación dentro de la aplicación.
+
+¿Cómo se hace uso del AuthContextProvider?
+
+En main.tsx, se envuelve a App con las etiquetas del contexto de autenticación:
+
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.tsx'
+import { AuthContextProvider } from './AuthContext.tsx';
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <AuthContextProvider>
+      <App/>
+    </AuthContextProvider>
+  </React.StrictMode>
+)
+
+Así, podremos tener acceso a este contexto en nuestra aplicación, y por ejemplo, podremos controlar a qué rutas se pueden acceder o a cuales no si estamos o no loggeados.

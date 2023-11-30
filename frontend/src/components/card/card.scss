@@ -1,0 +1,91 @@
+@import url(../../app.css);
+
+.card {
+    position: relative;
+    width: 45%;
+    height: 320px;
+    max-width: 270px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+
+    
+
+    @media screen and (max-width: 990px) {
+        margin-right: 15px;
+    }
+
+    
+    @media screen and (max-width: 620px){
+        width: 70%;
+        margin-right: 0px;
+    }
+}
+
+
+
+.card:hover .face_front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .face_back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+.face {
+    border: 1px solid #8c8c8c;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 2px;
+    overflow: hidden;
+    transition: .5s;
+
+    .circle{
+        font-size: 1.5rem;
+    }
+
+    &_front {
+        transform: perspective(600px) rotateY(0deg);
+        box-shadow: 0 5px 10px #000;
+    }
+
+    &_front img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &_back {
+        transform: perspective(600px) rotateY(180deg);
+        background: #171717;
+        padding: 20px;
+        color: #f3f3f3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border: 1px solid red;
+        box-shadow: 0 5px 10px #b90000;
+    }
+    &_back h3 {
+        font-family: 'Quicksand', sans-serif; 
+        font-size: 1.4rem;
+    }
+
+    &__back__phrase  {
+        font-style: italic;
+        font-size: 0.8rem;
+    }
+
+    &__back__fact span{
+        font-weight: 600;
+    }
+
+    &__back__fact {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+}

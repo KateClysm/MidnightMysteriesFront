@@ -1,0 +1,117 @@
+@keyframes upanddown {
+    0% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+    }
+}
+
+
+
+.selected-character {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    padding-top: 3em;
+    padding-bottom: 1em;
+    @media screen and (max-width: 700px) {
+        padding-top: 5em;
+    }
+    
+    h4 {
+        display: none;
+        color: var(--white-color);
+        font-weight: 300;
+        opacity: 1;
+        animation: fadeIn 2s;
+    }
+
+    span {
+        color: var(--blood-color);
+        cursor: pointer;
+    }
+
+    img {
+        width: 20vw;
+        height: 50vh;
+        border: 1px solid var(--blood-color);
+        margin-bottom: 1em;
+        margin-top: 1em;
+        @media screen and (max-width: 700px) {
+            width: 70vw;
+            height: 60vh;
+        }
+    }
+
+    form {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .charname {
+            //display: block;
+            background-color: transparent;
+            border: none;
+            font-size: 2em;
+            font-family: 'Quicksand';
+            text-align: center;
+            width: 80vw;
+            cursor: pointer;
+            color: var(--blood-color);
+            
+            ::ms-input-placeholder {
+               color: var(--blood-color);
+               text-align: start;
+            }
+            
+            &::placeholder {
+                font-family: 'Quicksand';
+
+            }
+
+            &:focus::-webkit-input-placeholder {
+                transition: opacity 0.8s 0s ease-in !important;
+                opacity: 0.35;
+            }
+
+            &:active, &:focus {
+                outline: none;
+            }
+            
+            @media screen and (max-width: 700px) {
+                font-size: 2em;
+            }
+        }
+
+        .submit {
+            margin: 0 auto; 
+            //display: block;
+            color: var(--white-color);
+            cursor: pointer;
+            padding-top: 10px;
+            text-align: center;
+            font-size: 2em;
+            &:hover {
+                animation: 10s upanddown alternate 4;
+            }
+        }
+
+    };
+
+    
+    .hidden {
+        display: none;
+    }
+
+    .visible {
+        display: block;
+    }
+
+}
