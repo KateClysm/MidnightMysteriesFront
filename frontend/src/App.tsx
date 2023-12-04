@@ -15,6 +15,7 @@ import TestButton from './components/test-button/TestButton';
 import Characters from './pages/unlocked_characters/Unlocked_Characters';
 import Synopsis from './pages/new-game/Synopsis';
 import ChooseCharacter from './pages/new-game/ChooseCharacter';
+import Contact from './pages/contact-page/Contact';
 
 const App: React.FC = () => {
 
@@ -53,6 +54,15 @@ const App: React.FC = () => {
     )
   }
 
+  const LayoutContact = () => {
+    return (
+      <>
+      <Nav />
+      <Outlet/>
+      <Footer/>
+      </>
+    )
+  }
   const router = createBrowserRouter([
     {
       path: '/', 
@@ -101,7 +111,7 @@ const App: React.FC = () => {
       element: <LayoutNewGame />,
       children: [
         {
-          path: '/newgame/',
+          path: '/newgame',
           element: <Synopsis />
         },
         {
@@ -109,6 +119,14 @@ const App: React.FC = () => {
           element: <ChooseCharacter />
         }
       ]
+    },
+    {
+      path: '/contact',
+      element: <LayoutContact/>,
+      children: [{
+        path: '/contact',
+        element: <Contact/>
+      }]
     },
     {
       path: '/*',

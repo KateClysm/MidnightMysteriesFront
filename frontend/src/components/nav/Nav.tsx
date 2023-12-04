@@ -24,7 +24,7 @@ const Nav: React.FC = () => {
     const isProfileOrCharacters =
     location.pathname.includes('/home/profile') ||
     location.pathname.includes('/home/characters') ||
-    location.pathname.includes('/home/help') || location.pathname.includes('/newgame');
+    location.pathname.includes('/home/help') || location.pathname.includes('/newgame') || location.pathname.includes('/contact');
 
     const hasGameInProgress = true;
 

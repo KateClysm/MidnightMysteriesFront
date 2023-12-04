@@ -1,0 +1,99 @@
+
+.flashlight {
+    width: 100%;
+    height: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../../assets/steps.png);
+    background-size: cover;
+    background-position: center;
+    padding-top: 4em;
+    height: fit-content;
+    @media screen and (max-width: 700px) {
+        width: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding-top: 4em;
+    }
+
+    h1 {
+        color: var(--white-color);
+        text-align: center;
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        //justify-content: space-around;
+        padding: 1em;
+        background-color: var(--grey-color);
+        border-radius: 5%;
+        width: 30vw;
+        height: fit-content;
+        margin: 2em auto;
+        
+        @media screen and (max-width: 700px) {
+            width: auto;
+        }
+
+        h4 {
+            text-align: center;
+            font-family: 'Bigelow Rules';
+            font-size: 3em;
+            font-weight: 300;
+            color: var(--white-color);
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            width: 100%;
+            @media screen and (max-width: 700px) {
+            }
+
+            label {
+                font-weight: 400;
+                margin-bottom: 0.5em;
+                padding-left: 0.2em;
+                font-size: 1.2em;
+            }
+            
+            button {
+                padding-top: 0.5em;
+            }
+            
+            input {
+                cursor: pointer;
+                margin-bottom: 0.5em;
+                color: var(--black-color);
+                border: none;
+                border-radius: 3%;
+                &:focus {
+                    outline: none;
+                }
+            }
+            textarea {
+                border-radius: 5%;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
