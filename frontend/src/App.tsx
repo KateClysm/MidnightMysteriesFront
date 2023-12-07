@@ -12,6 +12,7 @@ import Profile from './pages/profile/profile';
 // import ButtonHelp from './components/button-help/buttonHelp';
 import Help from './pages/help-page/Help';
 import TestButton from './components/test-button/TestButton';
+import ConectionExample from './pages/conection-example/ConectionExample';
 
 const App: React.FC = () => {
 
@@ -72,6 +73,10 @@ const App: React.FC = () => {
         {
           path: '/home/help',
           element: <Help/>
+        },
+        {
+          path: '/home/conection',
+          element: <ConectionExample/>
         },
       ]
     },
