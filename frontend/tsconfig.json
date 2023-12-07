@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "node_modules/react-icons", "node_modules/react-icons/fa"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

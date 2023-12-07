@@ -2,6 +2,8 @@
 
 .container_characters{
     width: 100%;
+    height: 100%;
+    padding: 50px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,6 +57,7 @@
 
     @media screen and (max-width: 620px) {
         flex-direction: column;
+        width: 50%;
     }
 
 }

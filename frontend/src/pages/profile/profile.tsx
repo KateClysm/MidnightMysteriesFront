@@ -27,6 +27,7 @@ const Character: ICharacter= {
 };
 
 const User: TUser = {
+id: 1,
   username: "Apolo123",
   email: "apol@gmail.com",
   age: 13,
@@ -41,28 +42,28 @@ const User: TUser = {
     <div className="container_profile">
 
     <main>
-    <div className="container_img"  style={{ backgroundImage: `url(${Character.image})` }}></div> 
+    <div className="container_img_character"  style={{ backgroundImage: `url(${Character.image})` }}></div> 
 
-      <div className="container_cards">
-        <div className="card_profile card">
-          <h2 className="card_title" >PROFILE</h2>
-          <ul className="card_list_data">
-            <li className="card_sub_title">USERNAME: <span>{ User.username }</span></li>
-            <li className="card_sub_title">AGE: <span>{ User.age }</span></li>
-            <li className="card_sub_title">UNLOCKED CHARACTERS: <span>{ User.unlocked_characters}</span></li>
-            <li className="card_sub_title">DAYS PLAYING: <span>{ User.times_played}</span></li>
+      <div className="profile_container_cards">
+        <div className="card_profile card_style">
+          <h2 className="card_style_title" >PROFILE</h2>
+          <ul className="card_style_list_data">
+            <li className="card_style_sub_title">USERNAME: <span>{ User.username }</span></li>
+            <li className="card_style_sub_title">AGE: <span>{ User.age }</span></li>
+            <li className="card_style_sub_title">UNLOCKED CHARACTERS: <span>{ User.unlocked_characters}</span></li>
+            <li className="card_style_sub_title">DAYS PLAYING: <span>{ User.times_played}</span></li>
             <li className="playtime">Member since: { User.member_since } months</li>
           </ul>
           
         </div>
 
-        <div className="card_character card">
-          <h2 className="card_title">CHARACTER DATA</h2>
-          <ul className="card_list_data">
-            <li className="card_sub_title">NAME: <span>{ Character.name }</span></li>
-            <li className="card_sub_title">SANITY: <span>{ Character.sanity }</span></li>
-            <li >{Character.state? (<p className="card_sub_title">STATE: <span>Alive</span></p>):(<p className="card_sub_title">STATE: <span>Dead</span></p>)}</li>
-            <li className="card_sub_title">ENDING: <span>{ Character.ending }</span></li>
+        <div className="card_character card_style">
+          <h2 className="card_style_title">CHARACTER DATA</h2>
+          <ul className="card_style_list_data">
+            <li className="card_style_sub_title">NAME: <span>{ Character.name }</span></li>
+            <li className="card_style_sub_title">SANITY: <span>{ Character.sanity }</span></li>
+            <li >{Character.state? (<p className="card_style_sub_title">STATE: <span>Alive</span></p>):(<p className="card_style_sub_title">STATE: <span>Dead</span></p>)}</li>
+            <li className="card_style_sub_title">ENDING: <span>{ Character.ending }</span></li>
           </ul>
         </div>
       </div>
