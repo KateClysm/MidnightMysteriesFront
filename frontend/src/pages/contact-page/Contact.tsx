@@ -1,28 +1,35 @@
 import React, {useState} from 'react';
+import emailjs from '@emailjs/browser';
 import EmailSent from './EmailSent';
 import './contact.scss';
 
 const Contact: React.FC = () => {
     const [submitted, submit] = useState(false);
-    /* const validateEmail = (email: string) => {        
-        let mailFormat = new RegExp('/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/');
-        if (email.value.match(mailFormat)) {
-            return true;
-        } else {
-            alert('Invalid email address!');
-            return false;
-        }
-    } */
-    
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    const form = e.target as HTMLFormElement;
+
+    emailjs.sendForm('service_75gy7ag', 'template_hj7uu7u', form, '7jzrab78YhEeoELYt')
+      .then((result) => {
+          console.log(result.text);
+          submit(true);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+      form.reset()
+  };
+
     return (
         <>  
-            {/* <img src={flashlight} alt="flashlight" className='flashlight'/> */}
             <div className='contact-container'>
                 <h1>MIDNIGHT MYSTERIES</h1>
 
                 <div className={`form-container ${submitted ? 'hidden' : ''}`}>
                     <h4>Contact Us</h4>
-                    <form name="form1" action="" onSubmit={() => submit(!submitted)}>
+                    <form name="form1" action="" onSubmit={(sendEmail)}>
                         <label htmlFor="name">Name:</label>
                         <input type="text" name='name' required/>
                         <label htmlFor="email" >Email:</label>
@@ -31,7 +38,7 @@ const Contact: React.FC = () => {
                         <textarea name="message" id='message' cols={30} rows={8}></textarea>
                         <button type='submit'>Submit</button>
                     </form>
-                </div>  
+                </div>
                 {submitted ? <EmailSent /> : null}
             </div>            
         </>
