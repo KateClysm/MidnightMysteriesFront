@@ -49,8 +49,8 @@ const Nav: React.FC = () => {
         <div className="container-nav">
             <div className="container-left">
                 <NavLink to="/home" className="nav-item">HOME</NavLink>
-                {hasGameInProgress ? null : <NavLink to="/playGame">PLAY</NavLink>}
-                {hasGameInProgress ? <NavLink to="/newgame">NEW GAME</NavLink> : null}
+                {hasGameInProgress ? null : <NavLink to="/playGame" className="nav-item">PLAY</NavLink>}
+                {hasGameInProgress ? <NavLink to="/newgame" className="nav-item">NEW GAME</NavLink> : null}
                 <button onClick={() => handleSave()} className="nav-item">SAVE GAME</button>
             </div>
 

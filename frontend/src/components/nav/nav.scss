@@ -9,16 +9,20 @@
         padding: 1rem 2rem;
         height: 3.5rem;
         
+        .nav-item{
+            font-size: 1.2rem;
+        }
+        
         .container-left{
             display: flex;
             align-items: center;
-            gap: 2rem;
+            gap: 0.8rem;
         }
 
         .container-right{
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.8rem;
 
             .dropdown-container{
                 padding: 0.1rem;
@@ -156,4 +160,23 @@
         
     }
    
+}
+
+@media screen and (min-width: 500px) {
+    .container-nav-absolute{
+        .container-nav{
+
+            .nav-item{
+                font-size: 1.5rem;
+            }
+
+            .container-left{
+                gap: 2rem;
+            }
+    
+            .container-right{
+                gap: 2rem;
+            }
+        }
+    }
 }
