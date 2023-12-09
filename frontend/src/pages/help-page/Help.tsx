@@ -19,7 +19,7 @@ const Help: React.FC = () => {
 
   return (
    <div className="help-container">
-      <h1> Midnigth Mysteries</h1>
+      <h1> MIDNIGHT MYSTERIES</h1>
       <p> How can we help you?</p>
 
       <div className="question">

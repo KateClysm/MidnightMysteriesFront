@@ -6,9 +6,9 @@ const Footer: React.FC = () => {
   return (
     <div className="container-footer">
       <div className="container-footer-access">
-        <NavLink to="/">CONTACT</NavLink>
+        <NavLink to="#">CONTACT</NavLink>
         <p>|</p>
-        <NavLink to="/">ABOUT US</NavLink>
+        <NavLink to="#">ABOUT US</NavLink>
         <p>|</p>
         <a href="https://linktr.ee/midnightmysteries06"> LINKTREE</a>
       </div>

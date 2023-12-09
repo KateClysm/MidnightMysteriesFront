@@ -94,7 +94,7 @@ const App: React.FC = () => {
           path: '/home/conection',
           element: <ConectionExample/>
         },
-{
+        {
           path: '/home/characters',
           element: <Characters/>
         },
@@ -115,6 +115,7 @@ const App: React.FC = () => {
         }
       ]
     },
+    
     {
       path: '/*',
       element: <NotFound />
