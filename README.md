@@ -1,6 +1,6 @@
 ![Midnight Mysteries](https://github.com/KateClysm/MidnightMysteriesFront/blob/main/frontend/src/assets/MIDNIGHT%20MYSTERIES.png)
 
-Midnight Mysteries comenzó su desarrollo en Octubre de 2023 como parte de un proyecto final de un grupo de estudiantes para el Curso de Desarrollo Web Full Stack de [SomosCoders](https://somoscoders.org/es)
+Midnight Mysteries comenzó su desarrollo en Octubre de 2023 como parte de un proyecto final de un grupo de estudiantes para el Curso de Desarrollo Web Full Stack de [SomosCoders](https://somoscoders.org/es).
 Este proyecto se realizó en un marco de trabajo que utilizó SCRUM como metodología ágil y Jira como software soporte para la organización de las tareas de desarrollo.
 
 ## Sobre el juego
