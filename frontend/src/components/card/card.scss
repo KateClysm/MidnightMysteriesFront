@@ -33,6 +33,9 @@
 }
 
 .face {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #8c8c8c;
     position: absolute;
     width: 100%;
@@ -53,9 +56,13 @@
 
     &_front img {
         position: absolute;
-        width: 100%;
+        width: 70%;
         height: 100%;
         object-fit: cover;
+
+        @media screen and (max-width: 620px){
+            width: 100%;
+        }
     }
 
     &_back {
