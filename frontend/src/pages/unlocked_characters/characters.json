@@ -7,7 +7,7 @@
         "sanity": "good",
         "state": true,
         "ending": "Handed over the murderer",
-        "image": "https://i.ibb.co/fNDz3c8/principal-character.png",
+        "image": "https://i.ibb.co/phCzp46/character-3.png",
         "id": "1"
     },
     {
@@ -17,7 +17,7 @@
         "sanity": "good",
         "state": true,
         "ending": "Handed over the murderer",
-        "image": "https://i.ibb.co/bFFn3Mp/principal-fem-character.png",
+        "image": "https://i.ibb.co/r24p5TR/character-2.png",
         "id": "3"
     },
     {
@@ -27,7 +27,7 @@
         "sanity": "good",
         "state": true,
         "ending": "Handed over the murderer",
-        "image": "https://i.ibb.co/fNDz3c8/principal-character.png",
+        "image": "https://i.ibb.co/phCzp46/character-3.png",
         "id": "1"
     },
     {
@@ -37,7 +37,7 @@
         "sanity": "good",
         "state": true,
         "ending": "Handed over the murderer",
-        "image": "https://i.ibb.co/fNDz3c8/principal-character.png",
+        "image": "https://i.ibb.co/phCzp46/character-3.png",
         "id": "1"
     },
     {
@@ -47,7 +47,7 @@
         "sanity": "good",
         "state": false,
         "ending": "Handed over the murderer",
-        "image": "https://i.ibb.co/fNDz3c8/principal-character.png",
+        "image": "https://i.ibb.co/phCzp46/character-3.png",
         "id": "2"
     },
     {
@@ -57,7 +57,7 @@
         "sanity": "good",
         "state": true,
         "ending": "Handed over the murderer",
-        "image": "https://i.ibb.co/bFFn3Mp/principal-fem-character.png",
+        "image": "https://i.ibb.co/HG23h34/character-1.png",
         "id": "3"
     },{
         "name": "Alex",
@@ -66,7 +66,7 @@
         "sanity": "good",
         "state": true,
         "ending": "Handed over the murderer",
-        "image": "https://i.ibb.co/fNDz3c8/principal-character.png",
+        "image": "https://i.ibb.co/phCzp46/character-3.png",
         "id": "1"
     },
     {
@@ -76,7 +76,7 @@
         "sanity": "good",
         "state": false,
         "ending": "Handed over the murderer",
-        "image": "https://i.ibb.co/fNDz3c8/principal-character.png",
+        "image": "https://i.ibb.co/phCzp46/character-3.png",
         "id": "2"
     },
     {
@@ -86,7 +86,7 @@
         "sanity": "good",
         "state": true,
         "ending": "Handed over the murderer",
-        "image": "https://i.ibb.co/bFFn3Mp/principal-fem-character.png",
+        "image": "https://i.ibb.co/HG23h34/character-1.png",
         "id": "3"
     },
     {
@@ -96,7 +96,7 @@
         "sanity": "good",
         "state": true,
         "ending": "Handed over the murderer",
-        "image": "https://i.ibb.co/fNDz3c8/principal-character.png",
+        "image": "https://i.ibb.co/phCzp46/character-3.png",
         "id": "1"
     },
     {
@@ -106,7 +106,7 @@
         "sanity": "good",
         "state": true,
         "ending": "Handed over the murderer",
-        "image": "https://i.ibb.co/bFFn3Mp/principal-fem-character.png",
+        "image": "https://i.ibb.co/r24p5TR/character-2.png",
         "id": "3"
     },
     {
@@ -116,7 +116,7 @@
         "sanity": "good",
         "state": true,
         "ending": "Handed over the murderer",
-        "image": "https://i.ibb.co/fNDz3c8/principal-character.png",
+        "image": "https://i.ibb.co/phCzp46/character-3.png",
         "id": "1"
     }
 ]
