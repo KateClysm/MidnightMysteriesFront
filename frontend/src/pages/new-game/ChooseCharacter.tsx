@@ -2,9 +2,9 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './newgame.scss';
 import './choose-character.scss';
-import character1 from '../../assets/character-1.png';
-import character2 from '../../assets/character-2.png';
-import character3 from '../../assets/character-3.png';
+import character1 from '../../assets/Character1profile-MM.png';
+import character2 from '../../assets/Character2profile-MM.png';
+import character3 from '../../assets/Character 3profile-MM.png';
 import SelectedCharacter from './SelectedCharacter';
 
 const ChooseCharacter: React.FC = () => {

@@ -18,7 +18,7 @@ const Register: React.FC = () => {
     .object({
       userName: z.string().min(2).max(20),
       email: z.string().email(),
-      password: z.string().min(5).max(20),
+      password: z.string().min(5, "La contraseña debe tener al menos cinco caracteres").max(20),
       repeatPassword: z.string().min(5).max(20),
     })
     .refine((data) => data.password === data.repeatPassword, {
@@ -47,8 +47,12 @@ const Register: React.FC = () => {
         <input
           type="text"
           placeholder="Username"
-          required
-          {...register("userName")}
+          {...register("userName", {
+            minLength: {
+              value: 2,
+              message: "El nombre de usuario debe tener al menos dos letrasaa"
+            }
+          })}
         />
         <label>Email</label>
         <input

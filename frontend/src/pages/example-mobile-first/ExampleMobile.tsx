@@ -2,9 +2,9 @@ import React from "react";
 import './example-mobile.scss';
 
 //characters
-import char1 from '../../assets/char1.png';
-import char2 from '../../assets/char2.png';
-import char3 from '../../assets/char3.png';
+import char1 from '../../assets/Character1-MM.png';
+import char2 from '../../assets/Character2-MM.png';
+import char3 from '../../assets/Character 3-MM.png';
 
 const ExampleMobile: React.FC = () => {
 

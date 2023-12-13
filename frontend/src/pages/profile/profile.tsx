@@ -2,7 +2,7 @@ import React from "react";
 import './profile.scss'
 import { ICharacter } from "../../interfaces&types/ICharacter";
 import { TUser } from "../../interfaces&types/TUser";
-import UrlImage from '../../assets/user.jpeg';
+import UrlImage from '../../assets/Alexfull.png';
 
 const Profile: React.FC = () => {
   /*if (!userCharacter && !playerProfile) {
